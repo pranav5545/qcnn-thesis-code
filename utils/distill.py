@@ -3,7 +3,7 @@ Knowledge-distillation utilities for RQ4.
 
 RQ4 asks whether a parameter-matched classical student can absorb the QCNN's learned
 *function* — distillation used as a simulability probe rather than as a way to make the
-student more accurate. See writing/thesis/rq4_implementation_plan.md.
+student more accurate. See Appendix F of the dissertation.
 
 Two hazards are handled here rather than left to call sites, because both fail silently:
 

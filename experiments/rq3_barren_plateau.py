@@ -2,7 +2,7 @@
 RQ3: Barren plateau analysis — gradient variance and entanglement entropy
 vs qubit count, following the canonical protocols in the literature.
 
-Design (see writing/lit_review/rq3_bp_methodology_notes.md for sources):
+Design (see Appendix E of the dissertation, extended methodology, for sources):
   - Var[dC/dtheta_k] over BP_N_INITS random parameter draws, fixed input,
     fixed single parameter k = first param of the CENTER conv unitary in
     layer 1 (Pesah et al. 2021 convention). Full gradients are stored too,

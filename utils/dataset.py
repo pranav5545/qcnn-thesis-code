@@ -132,7 +132,7 @@ def get_pca_loaders(
     Same sample selection as get_loaders (same seed => identical train/test subset),
     but returns PCA(n_components)-reduced features scaled to [-1, 1] instead of the
     raw flattened image. Used for angle/IQP encoding under RQ2's Q4 design decision
-    — see writing/thesis/rq2_design_decisions.md — replacing the naive
+    — see Appendix F of the dissertation — replacing the naive
     first-n_components-of-64-pixels truncation.
 
     PCA is fit once on the selected training subset (never on test) and reused —

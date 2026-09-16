@@ -27,7 +27,7 @@ Three axes, run as one config list so nothing is computed twice:
          depth-matching is architecturally impossible at this qubit count (verified
          2026-08-18: HE param count per block is fixed at 6 vs qcnn_native's 15, and
          both hit the same qubit-halving depth ceiling). Per the design decision
-         (writing/thesis/rq2_design_decisions.md Q5), we report BOTH the raw
+         (Appendix F of the dissertation, Q5), we report BOTH the raw
          depth-2 comparison AND this depth-3 "capacity-maximised" comparison,
          disclosing the residual 44-vs-74 gap rather than claiming a false match.
 

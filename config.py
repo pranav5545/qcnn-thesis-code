@@ -13,7 +13,7 @@ IMAGE_SIZE   = 8          # pixels per side after downsampling (8×8 = 64 featur
 #   utils.dataset.get_pca_loaders — NOT the first 6 of 64 pixels, which this comment
 #   described until 2026-08-20. That truncation was an information-starvation bug
 #   (the first 6 pixels are near-constant background), fixed under RQ2 design
-#   decision Q4; see writing/thesis/rq2_design_decisions.md.
+#   decision Q4; see Appendix F of the dissertation (design-decision records).
 #   Keeping qubit count fixed across encodings ensures circuit architecture
 #   (depth, parameter count) is identical — required for a fair encoding ablation.
 N_QUBITS     = 6
