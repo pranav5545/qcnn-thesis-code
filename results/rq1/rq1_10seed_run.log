@@ -1,0 +1,128 @@
+[full mode] seeds=10  epochs=50  n_train=500  n_test=200
+
+
+============================================================
+  Dataset: MNIST
+============================================================
+  Train: n=500, input_dim=64, classes=[0, 1]
+  Test : n=200, input_dim=64, classes=[0, 1]
+
+  QCNN params : 74  (circuit: 68)
+  CNN  params : 71  (delta: 3)
+  CNN  arch   : n_filters=1  hidden=7
+
+  Resumed checkpoint: [42, 43, 44, 45, 46] already done
+
+  -- Seed 42  (1/10) -- [skipped, in checkpoint]
+
+  -- Seed 43  (2/10) -- [skipped, in checkpoint]
+
+  -- Seed 44  (3/10) -- [skipped, in checkpoint]
+
+  -- Seed 45  (4/10) -- [skipped, in checkpoint]
+
+  -- Seed 46  (5/10) -- [skipped, in checkpoint]
+
+  -- Seed 47  (6/10) --
+  [QCNN]
+Epoch   1/50  train_loss=0.6662  train_acc=0.564  test_acc=0.520  (9.7s)
+Epoch   2/50  train_loss=0.6520  train_acc=0.564  test_acc=0.525  (10.8s)
+Epoch   3/50  train_loss=0.6358  train_acc=0.600  test_acc=0.570  (12.9s)
+Epoch   4/50  train_loss=0.6023  train_acc=0.602  test_acc=0.675  (15.7s)
+Epoch   5/50  train_loss=0.5574  train_acc=0.826  test_acc=0.745  (14.4s)
+Epoch   6/50  train_loss=0.5101  train_acc=0.818  test_acc=0.840  (12.6s)
+Epoch   7/50  train_loss=0.4683  train_acc=0.876  test_acc=0.880  (11.2s)
+Epoch   8/50  train_loss=0.4329  train_acc=0.910  test_acc=0.880  (10.2s)
+Epoch   9/50  train_loss=0.4033  train_acc=0.900  test_acc=0.915  (10.2s)
+Epoch  10/50  train_loss=0.3781  train_acc=0.912  test_acc=0.915  (10.2s)
+Epoch  11/50  train_loss=0.3569  train_acc=0.920  test_acc=0.940  (10.5s)
+Epoch  12/50  train_loss=0.3357  train_acc=0.940  test_acc=0.915  (11.1s)
+Epoch  13/50  train_loss=0.3187  train_acc=0.928  test_acc=0.950  (10.1s)
+Epoch  14/50  train_loss=0.3017  train_acc=0.932  test_acc=0.950  (10.4s)
+Epoch  15/50  train_loss=0.2908  train_acc=0.938  test_acc=0.945  (10.7s)
+Epoch  16/50  train_loss=0.2770  train_acc=0.936  test_acc=0.950  (10.6s)
+Epoch  17/50  train_loss=0.2708  train_acc=0.940  test_acc=0.955  (10.4s)
+Epoch  18/50  train_loss=0.2575  train_acc=0.950  test_acc=0.955  (10.6s)
+Epoch  19/50  train_loss=0.2480  train_acc=0.952  test_acc=0.960  (10.7s)
+Epoch  20/50  train_loss=0.2401  train_acc=0.940  test_acc=0.960  (11.7s)
+Epoch  21/50  train_loss=0.2284  train_acc=0.948  test_acc=0.960  (13.4s)
+Epoch  22/50  train_loss=0.2199  train_acc=0.960  test_acc=0.960  (15.5s)
+Epoch  23/50  train_loss=0.2138  train_acc=0.960  test_acc=0.965  (17.3s)
+Epoch  24/50  train_loss=0.2043  train_acc=0.964  test_acc=0.970  (15.7s)
+Epoch  25/50  train_loss=0.1991  train_acc=0.962  test_acc=0.970  (14.1s)
+Epoch  26/50  train_loss=0.1923  train_acc=0.956  test_acc=0.960  (20.6s)
+Epoch  27/50  train_loss=0.1918  train_acc=0.960  test_acc=0.965  (8.3s)
+Epoch  28/50  train_loss=0.1862  train_acc=0.962  test_acc=0.970  (8.0s)
+Epoch  29/50  train_loss=0.1814  train_acc=0.962  test_acc=0.960  (8.7s)
+Epoch  30/50  train_loss=0.1781  train_acc=0.964  test_acc=0.975  (7.6s)
+Epoch  31/50  train_loss=0.1712  train_acc=0.968  test_acc=0.975  (7.1s)
+Epoch  32/50  train_loss=0.1675  train_acc=0.968  test_acc=0.975  (5.7s)
+Epoch  33/50  train_loss=0.1630  train_acc=0.970  test_acc=0.975  (17.9s)
+Epoch  34/50  train_loss=0.1602  train_acc=0.970  test_acc=0.975  (9.1s)
+Epoch  35/50  train_loss=0.1585  train_acc=0.966  test_acc=0.975  (9.1s)
+Epoch  36/50  train_loss=0.1535  train_acc=0.974  test_acc=0.970  (7.1s)
+Epoch  37/50  train_loss=0.1509  train_acc=0.966  test_acc=0.975  (7.1s)
+Epoch  38/50  train_loss=0.1551  train_acc=0.964  test_acc=0.975  (7.2s)
+Epoch  39/50  train_loss=0.1497  train_acc=0.966  test_acc=0.970  (7.2s)
+Epoch  40/50  train_loss=0.1477  train_acc=0.958  test_acc=0.980  (7.2s)
+Epoch  41/50  train_loss=0.1425  train_acc=0.970  test_acc=0.975  (7.8s)
+Epoch  42/50  train_loss=0.1403  train_acc=0.976  test_acc=0.970  (8.2s)
+Epoch  43/50  train_loss=0.1391  train_acc=0.964  test_acc=0.970  (7.8s)
+Epoch  44/50  train_loss=0.1407  train_acc=0.962  test_acc=0.975  (7.8s)
+Epoch  45/50  train_loss=0.1379  train_acc=0.964  test_acc=0.970  (8.4s)
+Epoch  46/50  train_loss=0.1351  train_acc=0.966  test_acc=0.975  (7.7s)
+Epoch  47/50  train_loss=0.1314  train_acc=0.970  test_acc=0.980  (7.7s)
+Epoch  48/50  train_loss=0.1443  train_acc=0.962  test_acc=0.970  (8.0s)
+Epoch  49/50  train_loss=0.1286  train_acc=0.978  test_acc=0.980  (7.7s)
+Epoch  50/50  train_loss=0.1263  train_acc=0.974  test_acc=0.980  (7.7s)
+  [CNN]
+Epoch   1/50  train_loss=0.7059  train_acc=0.436  test_acc=0.480  (0.2s)
+Epoch   2/50  train_loss=0.6912  train_acc=0.548  test_acc=0.520  (0.2s)
+Epoch   3/50  train_loss=0.6855  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch   4/50  train_loss=0.6857  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch   5/50  train_loss=0.6855  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch   6/50  train_loss=0.6853  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch   7/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch   8/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch   9/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  10/50  train_loss=0.6852  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  11/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.1s)
+Epoch  12/50  train_loss=0.6852  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  13/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  14/50  train_loss=0.6853  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  15/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  16/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  17/50  train_loss=0.6854  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  18/50  train_loss=0.6853  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  19/50  train_loss=0.6854  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  20/50  train_loss=0.6853  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  21/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.1s)
+Epoch  22/50  train_loss=0.6854  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  23/50  train_loss=0.6853  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  24/50  train_loss=0.6853  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  25/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  26/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  27/50  train_loss=0.6853  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  28/50  train_loss=0.6856  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  29/50  train_loss=0.6852  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  30/50  train_loss=0.6854  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  31/50  train_loss=0.6855  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  32/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  33/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  34/50  train_loss=0.6850  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  35/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  36/50  train_loss=0.6852  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  37/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  38/50  train_loss=0.6853  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  39/50  train_loss=0.6853  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  40/50  train_loss=0.6850  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  41/50  train_loss=0.6850  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  42/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.4s)
+Epoch  43/50  train_loss=0.6855  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  44/50  train_loss=0.6850  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  45/50  train_loss=0.6861  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  46/50  train_loss=0.6850  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  47/50  train_loss=0.6850  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  48/50  train_loss=0.6856  train_acc=0.564  test_acc=0.520  (0.3s)
+Epoch  49/50  train_loss=0.6853  train_acc=0.564  test_acc=0.520  (0.2s)
+Epoch  50/50  train_loss=0.6851  train_acc=0.564  test_acc=0.520  (0.2s)

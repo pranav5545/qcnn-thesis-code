@@ -1,0 +1,27 @@
+# Datasets are NOT tracked. They are public, byte-identical for everyone, and
+# re-fetched in about a minute by scripts/download_data.py. Keeping them out is what
+# holds this repository at ~46 MB instead of ~200 MB.
+data/
+experiments/data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Results are TRACKED on purpose -- see README. Only transient scratch output is not.
+*.tmp
+*.log.bak

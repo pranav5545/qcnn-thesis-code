@@ -1,0 +1,82 @@
+RQ3 grid: 32 cells x 200 inits (qubits=[4, 6, 8, 10])
+
+[ 1/32] q4_qcnn_native_uniform_zero                  Var[dC/dth_15]=2.738e-02  S/Smax=0.000  (8.0s)
+Saved → results\rq3\checkpoint.json
+[ 2/32] q4_qcnn_native_uniform_mnist                 Var[dC/dth_15]=3.303e-02  S/Smax=0.005  (8.2s)
+Saved → results\rq3\checkpoint.json
+[ 3/32] q4_qcnn_native_gauss0.1_zero                 Var[dC/dth_15]=1.814e-02  S/Smax=0.000  (8.0s)
+Saved → results\rq3\checkpoint.json
+[ 4/32] q4_qcnn_native_gauss0.1_mnist                Var[dC/dth_15]=1.632e-02  S/Smax=0.005  (8.1s)
+Saved → results\rq3\checkpoint.json
+[ 5/32] q4_hardware_efficient_uniform_zero           Var[dC/dth_6]=3.071e-03  S/Smax=0.000  (3.7s)
+Saved → results\rq3\checkpoint.json
+[ 6/32] q4_hardware_efficient_uniform_mnist          Var[dC/dth_6]=8.682e-03  S/Smax=0.005  (4.5s)
+Saved → results\rq3\checkpoint.json
+[ 7/32] q4_hardware_efficient_gauss0.1_zero          Var[dC/dth_6]=9.198e-03  S/Smax=0.000  (3.9s)
+Saved → results\rq3\checkpoint.json
+[ 8/32] q4_hardware_efficient_gauss0.1_mnist         Var[dC/dth_6]=9.771e-03  S/Smax=0.005  (4.3s)
+Saved → results\rq3\checkpoint.json
+[ 9/32] q6_qcnn_native_uniform_zero                  Var[dC/dth_15]=8.008e-03  S/Smax=0.244  (11.1s)
+Saved → results\rq3\checkpoint.json
+[10/32] q6_qcnn_native_uniform_mnist                 Var[dC/dth_15]=6.940e-03  S/Smax=0.688  (10.4s)
+Saved → results\rq3\checkpoint.json
+[11/32] q6_qcnn_native_gauss0.1_zero                 Var[dC/dth_15]=3.285e-04  S/Smax=0.026  (9.7s)
+Saved → results\rq3\checkpoint.json
+[12/32] q6_qcnn_native_gauss0.1_mnist                Var[dC/dth_15]=1.101e-03  S/Smax=0.626  (10.3s)
+Saved → results\rq3\checkpoint.json
+[13/32] q6_hardware_efficient_uniform_zero           Var[dC/dth_6]=7.686e-03  S/Smax=0.229  (4.5s)
+Saved → results\rq3\checkpoint.json
+[14/32] q6_hardware_efficient_uniform_mnist          Var[dC/dth_6]=2.246e-03  S/Smax=0.664  (5.1s)
+Saved → results\rq3\checkpoint.json
+[15/32] q6_hardware_efficient_gauss0.1_zero          Var[dC/dth_6]=7.166e-03  S/Smax=0.047  (4.5s)
+Saved → results\rq3\checkpoint.json
+[16/32] q6_hardware_efficient_gauss0.1_mnist         Var[dC/dth_6]=7.576e-04  S/Smax=0.640  (5.0s)
+Saved → results\rq3\checkpoint.json
+[17/32] q8_qcnn_native_uniform_zero                  Var[dC/dth_30]=5.257e-03  S/Smax=0.000  (14.1s)
+Saved → results\rq3\checkpoint.json
+[18/32] q8_qcnn_native_uniform_mnist                 Var[dC/dth_30]=1.772e-03  S/Smax=0.495  (14.6s)
+Saved → results\rq3\checkpoint.json
+[19/32] q8_qcnn_native_gauss0.1_zero                 Var[dC/dth_30]=3.337e-02  S/Smax=0.000  (13.8s)
+Saved → results\rq3\checkpoint.json
+[20/32] q8_qcnn_native_gauss0.1_mnist                Var[dC/dth_30]=4.378e-03  S/Smax=0.495  (14.3s)
+Saved → results\rq3\checkpoint.json
+[21/32] q8_hardware_efficient_uniform_zero           Var[dC/dth_12]=9.358e-04  S/Smax=0.000  (5.9s)
+Saved → results\rq3\checkpoint.json
+[22/32] q8_hardware_efficient_uniform_mnist          Var[dC/dth_12]=5.352e-04  S/Smax=0.495  (6.3s)
+Saved → results\rq3\checkpoint.json
+[23/32] q8_hardware_efficient_gauss0.1_zero          Var[dC/dth_12]=7.567e-03  S/Smax=0.000  (6.0s)
+Saved → results\rq3\checkpoint.json
+[24/32] q8_hardware_efficient_gauss0.1_mnist         Var[dC/dth_12]=1.583e-04  S/Smax=0.495  (6.1s)
+Saved → results\rq3\checkpoint.json
+[25/32] q10_qcnn_native_uniform_zero                 Var[dC/dth_30]=1.925e-03  S/Smax=0.287  (19.6s)
+Saved → results\rq3\checkpoint.json
+[26/32] q10_qcnn_native_uniform_mnist                Var[dC/dth_30]=3.311e-04  S/Smax=0.672  (19.5s)
+Saved → results\rq3\checkpoint.json
+[27/32] q10_qcnn_native_gauss0.1_zero                Var[dC/dth_30]=4.264e-04  S/Smax=0.028  (18.7s)
+Saved → results\rq3\checkpoint.json
+[28/32] q10_qcnn_native_gauss0.1_mnist               Var[dC/dth_30]=3.243e-06  S/Smax=0.676  (24.0s)
+Saved → results\rq3\checkpoint.json
+[29/32] q10_hardware_efficient_uniform_zero          Var[dC/dth_12]=2.434e-04  S/Smax=0.211  (9.5s)
+Saved → results\rq3\checkpoint.json
+[30/32] q10_hardware_efficient_uniform_mnist         Var[dC/dth_12]=4.067e-04  S/Smax=0.651  (9.2s)
+Saved → results\rq3\checkpoint.json
+[31/32] q10_hardware_efficient_gauss0.1_zero         Var[dC/dth_12]=6.639e-03  S/Smax=0.056  (8.6s)
+Saved → results\rq3\checkpoint.json
+[32/32] q10_hardware_efficient_gauss0.1_mnist        Var[dC/dth_12]=1.523e-04  S/Smax=0.627  (7.9s)
+Saved → results\rq3\checkpoint.json
+Saved → results\rq3\gradient_variance.json
+
+========================================================================
+  RQ3 SUMMARY — Var[dC/dtheta_center] vs qubit count
+========================================================================
+  ansatz              init      input            q4          q6          q8         q10
+  qcnn_native         uniform   zero      2.738e-02   8.008e-03   5.257e-03   1.925e-03
+  qcnn_native         uniform   mnist     3.303e-02   6.940e-03   1.772e-03   3.311e-04
+  qcnn_native         gauss0.1  zero      1.814e-02   3.285e-04   3.337e-02   4.264e-04
+  qcnn_native         gauss0.1  mnist     1.632e-02   1.101e-03   4.378e-03   3.243e-06
+  hardware_efficient  uniform   zero      3.071e-03   7.686e-03   9.358e-04   2.434e-04
+  hardware_efficient  uniform   mnist     8.682e-03   2.246e-03   5.352e-04   4.067e-04
+  hardware_efficient  gauss0.1  zero      9.198e-03   7.166e-03   7.567e-03   6.639e-03
+  hardware_efficient  gauss0.1  mnist     9.771e-03   7.576e-04   1.583e-04   1.523e-04
+
+Total: 5.5 min

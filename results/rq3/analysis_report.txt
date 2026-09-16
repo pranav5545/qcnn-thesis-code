@@ -1,0 +1,41 @@
+====================================================================================================
+arm                                     E[g2] n=4       n=10   decay  k (poly)   R2p  b (exp)   R2e  pref  P(poly)
+qcnn_native_uniform_zero                 2.75e-02   1.93e-03    14.2      2.74  0.97    0.420  0.97  poly     0.54
+qcnn_native_uniform_mnist                3.31e-02   3.31e-04   100.0      4.90  0.98    0.759  1.00  expo     0.01
+qcnn_native_gauss0.1_zero                1.82e-02   4.27e-04    42.6      2.21  0.13    0.332  0.12  poly     0.94
+qcnn_native_gauss0.1_mnist               1.63e-02   3.25e-06  5018.0      7.19  0.54    1.177  0.61  expo     0.00
+hardware_efficient_uniform_zero          3.07e-03   2.43e-04    12.6      2.90  0.59    0.486  0.70  expo     0.00
+hardware_efficient_uniform_mnist         8.73e-03   4.08e-04    21.4      3.54  0.97    0.532  0.94  poly     0.94
+hardware_efficient_gauss0.1_zero         9.20e-03   6.65e-03     1.4      0.31  0.77    0.045  0.73  poly     0.66
+hardware_efficient_gauss0.1_mnist        9.78e-03   1.52e-04    64.1      4.79  0.94    0.703  0.86  poly     1.00
+====================================================================================================
+
+MNIST/zero E[g2] ratio (suppression <1):
+  qcnn_native_uniform                 n=4:   1.20  n=6:   0.86  n=8:   0.33  n=10:   0.17
+  qcnn_native_gauss0.1                n=4:   0.90  n=6:   3.36  n=8:   0.25  n=10:   0.01
+  hardware_efficient_uniform          n=4:   2.84  n=6:   0.29  n=8:   0.57  n=10:   1.67
+  hardware_efficient_gauss0.1         n=4:   1.06  n=6:   0.11  n=8:   0.02  n=10:   0.02
+
+gauss/uniform E[g2] ratio (mitigation >1):
+  qcnn_native_zero                    n=4:    0.7  n=6:    0.0  n=8:    6.3  n=10:    0.2
+  qcnn_native_mnist                   n=4:    0.5  n=6:    0.2  n=8:    4.7  n=10:    0.0
+  hardware_efficient_zero             n=4:    3.0  n=6:    0.9  n=8:    8.2  n=10:   27.3
+  hardware_efficient_mnist            n=4:    1.1  n=6:    0.3  n=8:    0.3  n=10:    0.4
+
+Interleaved S/Smax (mean +- std over 200 inits):
+  qcnn_native/uniform/zero    n=4: 0.468±0.183  n=6: 0.450±0.152  n=8: 0.473±0.133  n=10: 0.459±0.113
+  qcnn_native/uniform/mnist   n=4: 0.443±0.200  n=6: 0.731±0.038  n=8: 0.705±0.036  n=10: 0.766±0.028
+  qcnn_native/gauss0.1/zero    n=4: 0.038±0.028  n=6: 0.043±0.028  n=8: 0.038±0.021  n=10: 0.038±0.020
+  qcnn_native/gauss0.1/mnist   n=4: 0.070±0.046  n=6: 0.674±0.009  n=8: 0.658±0.006  n=10: 0.705±0.003
+  hardware_efficient/uniform/zero    n=4: 0.445±0.193  n=6: 0.444±0.153  n=8: 0.444±0.146  n=10: 0.444±0.126
+  hardware_efficient/uniform/mnist   n=4: 0.462±0.184  n=6: 0.740±0.038  n=8: 0.696±0.039  n=10: 0.753±0.027
+  hardware_efficient/gauss0.1/zero    n=4: 0.042±0.024  n=6: 0.041±0.019  n=8: 0.043±0.016  n=10: 0.040±0.014
+  hardware_efficient/gauss0.1/mnist   n=4: 0.040±0.024  n=6: 0.623±0.010  n=8: 0.489±0.010  n=10: 0.682±0.004
+
+Half-cut S/Smax means (locality exhibit; structurally 0 at n=4,8 for product inputs):
+  qcnn_native/uniform/zero    n=4: 0.000  n=6: 0.244  n=8: 0.000  n=10: 0.287
+  qcnn_native/uniform/mnist   n=4: 0.005  n=6: 0.688  n=8: 0.495  n=10: 0.672
+  hardware_efficient/uniform/zero    n=4: 0.000  n=6: 0.229  n=8: 0.000  n=10: 0.211
+  hardware_efficient/uniform/mnist   n=4: 0.005  n=6: 0.664  n=8: 0.495  n=10: 0.651
+
+Wrote results\rq3\analysis.json and 4 figures to results\rq3\figures/

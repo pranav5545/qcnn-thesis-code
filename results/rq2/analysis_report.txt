@@ -1,0 +1,263 @@
+==============================================================================
+  RQ2 ANALYSIS — QCNN design choices (encoding × ansatz × depth)
+==============================================================================
+  11 configs × 5 seeds × 50 epochs × 2 datasets
+  seeds [42, 43, 44, 45, 46]   n_train=500  n_test=200
+
+  POWER: n=5 seeds. The exact two-sided Wilcoxon floor at 5 non-zero diffs is
+  2/2^5 = 0.0625, so Wilcoxon CANNOT reach p<0.05 here regardless of effect
+  size. Paired t and Cohen's dz carry the quantitative story, as in RQ1.
+
+==============================================================================
+  MNIST
+==============================================================================
+
+  PER-CONFIG (final-epoch test accuracy)
+  config                                    mean      sd  params  group      distinct
+  ----------------------------------------------------------------------------
+  amplitude__hardware_efficient__L2       0.9750  0.0000      38  core       1/5
+  amplitude__hardware_efficient__L3       1.0000  0.0000      44  capacity   1/5
+  amplitude__qcnn_native__L1              0.9640  0.0037      59  depth      3/5
+  amplitude__qcnn_native__L2              0.9750  0.0084      74  core       3/5
+  amplitude__qcnn_native__L3              1.0000  0.0000      89  depth      1/5
+  angle__hardware_efficient__L2           0.9100  0.0032      38  core       3/5
+  angle__hardware_efficient__L3           0.8970  0.0157      44  capacity   5/5
+  angle__qcnn_native__L2                  0.9900  0.0000      74  core       1/5
+  iqp__hardware_efficient__L2             0.6650  0.0145      38  core       4/5
+  iqp__hardware_efficient__L3             0.8020  0.0093      44  capacity   5/5
+  iqp__qcnn_native__L2                    0.7420  0.0240      74  core       3/5
+
+  ENCODING ROLL-UP  ** CONFOUNDED — do not use as the headline **
+    Amplitude  0.9828  (over 5 configs)
+    Angle      0.9323  (over 3 configs)
+    IQP        0.7363  (over 3 configs)
+    Config counts are unbalanced: amplitude owns both depth-study cells,
+    so its roll-up includes an L3 qcnn_native cell that angle and IQP have
+    no counterpart for. Use the matched comparison below instead.
+
+  ENCODING, MATCHED WITHIN (ansatz, depth) — the defensible comparison
+    [QCNN (native), depth 2]  ranking: Angle > Amplitude > IQP
+      amplitude_vs_angle:
+        amplitude 0.9750  vs  angle 0.9900   diff -0.0150
+          95% CI [-0.0266, -0.0034]   t=-3.59  p=0.0231   dz=-1.60
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+      amplitude_vs_iqp:
+        amplitude 0.9750  vs  iqp 0.7420   diff +0.2330
+          95% CI [+0.2024, +0.2636]   t=+21.14  p=0.0000   dz=+9.45
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+      angle_vs_iqp:
+        angle 0.9900  vs  iqp 0.7420   diff +0.2480
+          95% CI [+0.2147, +0.2813]   t=+20.67  p=0.0000   dz=+9.24
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    [HEA, depth 2]  ranking: Amplitude > Angle > IQP
+      amplitude_vs_angle:
+        amplitude 0.9750  vs  angle 0.9100   diff +0.0650
+          95% CI [+0.0606, +0.0694]   t=+41.11  p=0.0000   dz=+18.38
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+      amplitude_vs_iqp:
+        amplitude 0.9750  vs  iqp 0.6650   diff +0.3100
+          95% CI [+0.2899, +0.3301]   t=+42.78  p=0.0000   dz=+19.13
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+      angle_vs_iqp:
+        angle 0.9100  vs  iqp 0.6650   diff +0.2450
+          95% CI [+0.2269, +0.2631]   t=+37.58  p=0.0000   dz=+16.81
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    [HEA, depth 3]  ranking: Amplitude > Angle > IQP
+      amplitude_vs_angle:
+        amplitude 1.0000  vs  angle 0.8970   diff +0.1030
+          95% CI [+0.0812, +0.1248]   t=+13.13  p=0.0002   dz=+5.87
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+      amplitude_vs_iqp:
+        amplitude 1.0000  vs  iqp 0.8020   diff +0.1980
+          95% CI [+0.1851, +0.2109]   t=+42.70  p=0.0000   dz=+19.10
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+      angle_vs_iqp:
+        angle 0.8970  vs  iqp 0.8020   diff +0.0950
+          95% CI [+0.0749, +0.1151]   t=+13.11  p=0.0002   dz=+5.86
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    Same ordering in every stratum: False
+    IQP last in every stratum:      True
+    Amplitude first in every stratum: False
+
+  ANSATZ — raw (both depth 2; qcnn_native 74 params vs HEA 38)
+    Amplitude:
+      qcnn_native_L2 0.9750  vs  hea_L2 0.9750   diff +0.0000
+        95% CI [-0.0116, +0.0116]   t=+0.00  p=1.0000   dz=+0.00
+        Wilcoxon p=1.0000 (exact two-sided floor at n=5: 0.0625)
+    Angle:
+      qcnn_native_L2 0.9900  vs  hea_L2 0.9100   diff +0.0800
+        95% CI [+0.0756, +0.0844]   t=+50.60  p=0.0000   dz=+22.63
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    IQP:
+      qcnn_native_L2 0.7420  vs  hea_L2 0.6650   diff +0.0770
+        95% CI [+0.0497, +0.1043]   t=+7.84  p=0.0014   dz=+3.51
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+
+  ANSATZ — capacity-maximised (qcnn_native L2 = 74 vs HEA L3 = 44)
+    Amplitude  (residual param gap 30):
+      qcnn_native_L2 0.9750  vs  hea_L3 1.0000   diff -0.0250
+        95% CI [-0.0366, -0.0134]   t=-5.98  p=0.0039   dz=-2.67
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    Angle  (residual param gap 30):
+      qcnn_native_L2 0.9900  vs  hea_L3 0.8970   diff +0.0930
+        95% CI [+0.0712, +0.1148]   t=+11.86  p=0.0003   dz=+5.30
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    IQP  (residual param gap 30):
+      qcnn_native_L2 0.7420  vs  hea_L3 0.8020   diff -0.0600
+        95% CI [-0.0926, -0.0274]   t=-5.12  p=0.0069   dz=-2.29
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+
+  DEPTH SUB-STUDY (amplitude · qcnn_native)
+    depth 1: 0.9640 ± 0.0037  (59 params)
+    depth 2: 0.9750 ± 0.0084  (74 params)
+    depth 3: 1.0000 ± 0.0000  (89 params)
+    L2_vs_L1:
+      L2 0.9750  vs  L1 0.9640   diff +0.0110
+        95% CI [-0.0025, +0.0245]   t=+2.27  p=0.0858   dz=+1.01
+        Wilcoxon p=0.1250 (exact two-sided floor at n=5: 0.1250)
+    L3_vs_L2:
+      L3 1.0000  vs  L2 0.9750   diff +0.0250
+        95% CI [+0.0134, +0.0366]   t=+5.98  p=0.0039   dz=+2.67
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    L3_vs_L1:
+      L3 1.0000  vs  L1 0.9640   diff +0.0360
+        95% CI [+0.0308, +0.0412]   t=+19.24  p=0.0000   dz=+8.61
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+
+  ZERO SEED-VARIANCE AUDIT — 4/11 configs
+    amplitude__qcnn_native__L3             all 5 seeds land on 1.0000 = 200/200 test items  [perfect]
+    amplitude__hardware_efficient__L3      all 5 seeds land on 1.0000 = 200/200 test items  [perfect]
+    angle__qcnn_native__L2                 all 5 seeds land on 0.9900 = 198/200 test items
+    amplitude__hardware_efficient__L2      all 5 seeds land on 0.9750 = 195/200 test items
+
+==============================================================================
+  Fashion-MNIST
+==============================================================================
+
+  PER-CONFIG (final-epoch test accuracy)
+  config                                    mean      sd  params  group      distinct
+  ----------------------------------------------------------------------------
+  amplitude__hardware_efficient__L2       0.9220  0.0040      38  core       3/5
+  amplitude__hardware_efficient__L3       0.9420  0.0024      44  capacity   2/5
+  amplitude__qcnn_native__L1              0.9120  0.0051      59  depth      4/5
+  amplitude__qcnn_native__L2              0.9510  0.0049      74  core       3/5
+  amplitude__qcnn_native__L3              0.9540  0.0049      89  depth      3/5
+  angle__hardware_efficient__L2           0.9130  0.0024      38  core       2/5
+  angle__hardware_efficient__L3           0.9130  0.0040      44  capacity   3/5
+  angle__qcnn_native__L2                  0.9510  0.0058      74  core       4/5
+  iqp__hardware_efficient__L2             0.6260  0.0058      38  core       4/5
+  iqp__hardware_efficient__L3             0.8160  0.0116      44  capacity   3/5
+  iqp__qcnn_native__L2                    0.6940  0.0358      74  core       5/5
+
+  ENCODING ROLL-UP  ** CONFOUNDED — do not use as the headline **
+    Amplitude  0.9362  (over 5 configs)
+    Angle      0.9257  (over 3 configs)
+    IQP        0.7120  (over 3 configs)
+    Config counts are unbalanced: amplitude owns both depth-study cells,
+    so its roll-up includes an L3 qcnn_native cell that angle and IQP have
+    no counterpart for. Use the matched comparison below instead.
+
+  ENCODING, MATCHED WITHIN (ansatz, depth) — the defensible comparison
+    [QCNN (native), depth 2]  ranking: Angle > Amplitude > IQP
+      amplitude_vs_angle:
+        amplitude 0.9510  vs  angle 0.9510   diff +0.0000
+          95% CI [-0.0076, +0.0076]   t=+0.00  p=1.0000   dz=+0.00
+          Wilcoxon p=1.0000 (exact two-sided floor at n=5: 0.2500)
+      amplitude_vs_iqp:
+        amplitude 0.9510  vs  iqp 0.6940   diff +0.2570
+          95% CI [+0.2104, +0.3036]   t=+15.32  p=0.0001   dz=+6.85
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+      angle_vs_iqp:
+        angle 0.9510  vs  iqp 0.6940   diff +0.2570
+          95% CI [+0.2068, +0.3072]   t=+14.22  p=0.0001   dz=+6.36
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    [HEA, depth 2]  ranking: Amplitude > Angle > IQP
+      amplitude_vs_angle:
+        amplitude 0.9220  vs  angle 0.9130   diff +0.0090
+          95% CI [+0.0022, +0.0158]   t=+3.67  p=0.0213   dz=+1.64
+          Wilcoxon p=0.1250 (exact two-sided floor at n=5: 0.1250)
+      amplitude_vs_iqp:
+        amplitude 0.9220  vs  iqp 0.6260   diff +0.2960
+          95% CI [+0.2849, +0.3071]   t=+74.00  p=0.0000   dz=+33.09
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+      angle_vs_iqp:
+        angle 0.9130  vs  iqp 0.6260   diff +0.2870
+          95% CI [+0.2799, +0.2941]   t=+112.57  p=0.0000   dz=+50.34
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    [HEA, depth 3]  ranking: Amplitude > Angle > IQP
+      amplitude_vs_angle:
+        amplitude 0.9420  vs  angle 0.9130   diff +0.0290
+          95% CI [+0.0222, +0.0358]   t=+11.84  p=0.0003   dz=+5.29
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+      amplitude_vs_iqp:
+        amplitude 0.9420  vs  iqp 0.8160   diff +0.1260
+          95% CI [+0.1099, +0.1421]   t=+21.77  p=0.0000   dz=+9.74
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+      angle_vs_iqp:
+        angle 0.9130  vs  iqp 0.8160   diff +0.0970
+          95% CI [+0.0791, +0.1149]   t=+15.06  p=0.0001   dz=+6.73
+          Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    Same ordering in every stratum: False
+    IQP last in every stratum:      True
+    Amplitude first in every stratum: False
+
+  ANSATZ — raw (both depth 2; qcnn_native 74 params vs HEA 38)
+    Amplitude:
+      qcnn_native_L2 0.9510  vs  hea_L2 0.9220   diff +0.0290
+        95% CI [+0.0209, +0.0371]   t=+9.95  p=0.0006   dz=+4.45
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    Angle:
+      qcnn_native_L2 0.9510  vs  hea_L2 0.9130   diff +0.0380
+        95% CI [+0.0297, +0.0463]   t=+12.67  p=0.0002   dz=+5.66
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    IQP:
+      qcnn_native_L2 0.6940  vs  hea_L2 0.6260   diff +0.0680
+        95% CI [+0.0131, +0.1229]   t=+3.44  p=0.0264   dz=+1.54
+        Wilcoxon p=0.1250 (exact two-sided floor at n=5: 0.1250)
+
+  ANSATZ — capacity-maximised (qcnn_native L2 = 74 vs HEA L3 = 44)
+    Amplitude  (residual param gap 30):
+      qcnn_native_L2 0.9510  vs  hea_L3 0.9420   diff +0.0090
+        95% CI [-0.0002, +0.0182]   t=+2.71  p=0.0533   dz=+1.21
+        Wilcoxon p=0.1250 (exact two-sided floor at n=5: 0.1250)
+    Angle  (residual param gap 30):
+      qcnn_native_L2 0.9510  vs  hea_L3 0.9130   diff +0.0380
+        95% CI [+0.0286, +0.0474]   t=+11.21  p=0.0004   dz=+5.01
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    IQP  (residual param gap 30):
+      qcnn_native_L2 0.6940  vs  hea_L3 0.8160   diff -0.1220
+        95% CI [-0.1640, -0.0800]   t=-8.06  p=0.0013   dz=-3.61
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+
+  DEPTH SUB-STUDY (amplitude · qcnn_native)
+    depth 1: 0.9120 ± 0.0051  (59 params)
+    depth 2: 0.9510 ± 0.0049  (74 params)
+    depth 3: 0.9540 ± 0.0049  (89 params)
+    L2_vs_L1:
+      L2 0.9510  vs  L1 0.9120   diff +0.0390
+        95% CI [+0.0271, +0.0509]   t=+9.07  p=0.0008   dz=+4.06
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+    L3_vs_L2:
+      L3 0.9540  vs  L2 0.9510   diff +0.0030
+        95% CI [-0.0074, +0.0134]   t=+0.80  p=0.4676   dz=+0.36
+        Wilcoxon p=0.7500 (exact two-sided floor at n=5: 0.0625)
+    L3_vs_L1:
+      L3 0.9540  vs  L1 0.9120   diff +0.0420
+        95% CI [+0.0386, +0.0454]   t=+34.29  p=0.0000   dz=+15.34
+        Wilcoxon p=0.0625 (exact two-sided floor at n=5: 0.0625)
+
+  ZERO SEED-VARIANCE AUDIT — 0/11 configs
+    none — every config varies across seeds
+
+==============================================================================
+  CROSS-DATASET
+==============================================================================
+
+  Amplitude's margin over angle, within matched cells:
+    [qcnn_native__L2]  MNIST -0.0150   Fashion-MNIST +0.0000
+    [hardware_efficient__L2]  MNIST +0.0650   Fashion-MNIST +0.0090
+    [hardware_efficient__L3]  MNIST +0.1030   Fashion-MNIST +0.0290
+
+  MNIST 0-vs-1 saturates (two configs reach 1.0000), which flatters whichever encoding is ahead and compresses every contrast at the top of the range. Fashion-MNIST is the more informative dataset and should carry the argument.
+
+  Zero-variance cells: MNIST 4/11, Fashion-MNIST 0/11 — same code, same seeds, same pipeline, only the dataset differs, which is what rules out a non-propagating seed and leaves the ceiling effect.

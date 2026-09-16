@@ -1,0 +1,232 @@
+{
+  "_meta": {
+    "what": "RQ1 (original) vs RQ4 (retrained on a remote CPU session) final-epoch results for the same seeds, models and configuration.",
+    "why": "Quantifies the local/remote hardware split disclosed in Appendix G, which was previously asserted to be harmless without measurement.",
+    "generated": "2026-09-02"
+  },
+  "n_models": 20,
+  "accuracy_mismatches": 0,
+  "max_abs_test_loss_diff": 2.0459294318431187e-07,
+  "comparisons": [
+    {
+      "dataset": "mnist",
+      "seed": 42,
+      "model": "qcnn",
+      "rq1_test_acc": 0.97,
+      "rq4_test_acc": 0.97,
+      "acc_identical": true,
+      "rq1_test_loss": 0.09573726862668991,
+      "rq4_test_loss": 0.09573720641434193,
+      "abs_loss_diff": 6.221234798153841e-08
+    },
+    {
+      "dataset": "mnist",
+      "seed": 42,
+      "model": "cnn",
+      "rq1_test_acc": 0.99,
+      "rq4_test_acc": 0.99,
+      "acc_identical": true,
+      "rq1_test_loss": 0.07420110695064068,
+      "rq4_test_loss": 0.07420112669467926,
+      "abs_loss_diff": 1.9744038584623702e-08
+    },
+    {
+      "dataset": "mnist",
+      "seed": 43,
+      "model": "qcnn",
+      "rq1_test_acc": 0.965,
+      "rq4_test_acc": 0.965,
+      "acc_identical": true,
+      "rq1_test_loss": 0.11688948675990105,
+      "rq4_test_loss": 0.1168894873559475,
+      "abs_loss_diff": 5.960464483090178e-10
+    },
+    {
+      "dataset": "mnist",
+      "seed": 43,
+      "model": "cnn",
+      "rq1_test_acc": 0.995,
+      "rq4_test_acc": 0.995,
+      "acc_identical": true,
+      "rq1_test_loss": 0.008074463261291385,
+      "rq4_test_loss": 0.00807446106337011,
+      "abs_loss_diff": 2.1979212755374178e-09
+    },
+    {
+      "dataset": "mnist",
+      "seed": 44,
+      "model": "qcnn",
+      "rq1_test_acc": 0.97,
+      "rq4_test_acc": 0.97,
+      "acc_identical": true,
+      "rq1_test_loss": 0.10349977374076844,
+      "rq4_test_loss": 0.10349997833371162,
+      "abs_loss_diff": 2.0459294318431187e-07
+    },
+    {
+      "dataset": "mnist",
+      "seed": 44,
+      "model": "cnn",
+      "rq1_test_acc": 1.0,
+      "rq4_test_acc": 1.0,
+      "acc_identical": true,
+      "rq1_test_loss": 0.0008669569251742359,
+      "rq4_test_loss": 0.0008669537400510307,
+      "abs_loss_diff": 3.185123205223968e-09
+    },
+    {
+      "dataset": "mnist",
+      "seed": 45,
+      "model": "qcnn",
+      "rq1_test_acc": 0.985,
+      "rq4_test_acc": 0.985,
+      "acc_identical": true,
+      "rq1_test_loss": 0.09756809294223785,
+      "rq4_test_loss": 0.0975681173801422,
+      "abs_loss_diff": 2.4437904352914153e-08
+    },
+    {
+      "dataset": "mnist",
+      "seed": 45,
+      "model": "cnn",
+      "rq1_test_acc": 0.99,
+      "rq4_test_acc": 0.99,
+      "acc_identical": true,
+      "rq1_test_loss": 0.019153747893869876,
+      "rq4_test_loss": 0.019153806017711758,
+      "abs_loss_diff": 5.812384188189079e-08
+    },
+    {
+      "dataset": "mnist",
+      "seed": 46,
+      "model": "qcnn",
+      "rq1_test_acc": 0.985,
+      "rq4_test_acc": 0.985,
+      "acc_identical": true,
+      "rq1_test_loss": 0.08879237711429595,
+      "rq4_test_loss": 0.08879238188266754,
+      "abs_loss_diff": 4.768371586472142e-09
+    },
+    {
+      "dataset": "mnist",
+      "seed": 46,
+      "model": "cnn",
+      "rq1_test_acc": 0.995,
+      "rq4_test_acc": 0.995,
+      "acc_identical": true,
+      "rq1_test_loss": 0.025342904198914766,
+      "rq4_test_loss": 0.025342986378818752,
+      "abs_loss_diff": 8.217990398601271e-08
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 42,
+      "model": "qcnn",
+      "rq1_test_acc": 0.95,
+      "rq4_test_acc": 0.95,
+      "acc_identical": true,
+      "rq1_test_loss": 0.185207998752594,
+      "rq4_test_loss": 0.18520794689655304,
+      "abs_loss_diff": 5.185604096125118e-08
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 42,
+      "model": "cnn",
+      "rq1_test_acc": 0.925,
+      "rq4_test_acc": 0.925,
+      "acc_identical": true,
+      "rq1_test_loss": 0.1914280590415001,
+      "rq4_test_loss": 0.19142802983522414,
+      "abs_loss_diff": 2.9206275953264083e-08
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 43,
+      "model": "qcnn",
+      "rq1_test_acc": 0.95,
+      "rq4_test_acc": 0.95,
+      "acc_identical": true,
+      "rq1_test_loss": 0.19537274956703185,
+      "rq4_test_loss": 0.19537273108959197,
+      "abs_loss_diff": 1.8477439883701763e-08
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 43,
+      "model": "cnn",
+      "rq1_test_acc": 0.935,
+      "rq4_test_acc": 0.935,
+      "acc_identical": true,
+      "rq1_test_loss": 0.18735369846224784,
+      "rq4_test_loss": 0.18735373221337795,
+      "abs_loss_diff": 3.3751130112946726e-08
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 44,
+      "model": "qcnn",
+      "rq1_test_acc": 0.95,
+      "rq4_test_acc": 0.95,
+      "acc_identical": true,
+      "rq1_test_loss": 0.1907789331674576,
+      "rq4_test_loss": 0.19077893555164338,
+      "abs_loss_diff": 2.384185793236071e-09
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 44,
+      "model": "cnn",
+      "rq1_test_acc": 0.955,
+      "rq4_test_acc": 0.955,
+      "acc_identical": true,
+      "rq1_test_loss": 0.09452953973785043,
+      "rq4_test_loss": 0.09452952068299054,
+      "abs_loss_diff": 1.905485988440425e-08
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 45,
+      "model": "qcnn",
+      "rq1_test_acc": 0.945,
+      "rq4_test_acc": 0.945,
+      "acc_identical": true,
+      "rq1_test_loss": 0.17613553017377853,
+      "rq4_test_loss": 0.1761355248093605,
+      "abs_loss_diff": 5.364418020903372e-09
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 45,
+      "model": "cnn",
+      "rq1_test_acc": 0.96,
+      "rq4_test_acc": 0.96,
+      "acc_identical": true,
+      "rq1_test_loss": 0.09230732783675194,
+      "rq4_test_loss": 0.09230733379721641,
+      "abs_loss_diff": 5.96046446921239e-09
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 46,
+      "model": "qcnn",
+      "rq1_test_acc": 0.96,
+      "rq4_test_acc": 0.96,
+      "acc_identical": true,
+      "rq1_test_loss": 0.1893764293193817,
+      "rq4_test_loss": 0.18937642097473145,
+      "abs_loss_diff": 8.344650248570673e-09
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 46,
+      "model": "cnn",
+      "rq1_test_acc": 0.96,
+      "rq4_test_acc": 0.96,
+      "acc_identical": true,
+      "rq1_test_loss": 0.1116325592249632,
+      "rq4_test_loss": 0.11163248479366303,
+      "abs_loss_diff": 7.443130016493438e-08
+    }
+  ]
+}

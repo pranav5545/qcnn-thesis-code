@@ -1,0 +1,16 @@
+=== re-evaluating on the enlarged test set ===
+  fashion_mnist: 195 models, 2000 test images
+    [6/195] qcnn_teacher_seed42.pt  124.1s  acc(full)=0.9495
+    [7/195] qcnn_teacher_seed43.pt  122.0s  acc(full)=0.9405
+    [8/195] qcnn_teacher_seed44.pt  121.5s  acc(full)=0.9575
+    [9/195] qcnn_teacher_seed45.pt  115.0s  acc(full)=0.9620
+    [10/195] qcnn_teacher_seed46.pt  126.8s  acc(full)=0.9535
+    [50/195] students/r1_hard_a0.0_T4.0_n200_s46.pt    0.1s  acc(full)=0.9505
+    [100/195] students/r2_ckd_a0.9_T4.0_nfull_s46.pt    0.2s  acc(full)=0.9560
+    [150/195] students/r4_ckd_a0.9_T4.0_nfull_s46.pt    0.1s  acc(full)=0.9555
+  fashion_mnist done in 10.8 min -> results\rq4\reeval\fashion_mnist_logits.pt
+
+=== verification gate: prefix must reproduce published numbers ===
+  fashion_mnist: all 195 models reproduce their recorded 200-image accuracy exactly
+
+GATE PASSED

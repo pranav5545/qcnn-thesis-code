@@ -1,0 +1,1858 @@
+{
+  "mnist": {
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "epochs": 50,
+    "n_train": 500,
+    "n_test": 200,
+    "per_config": {
+      "angle__qcnn_native__L2": {
+        "encoding": "angle",
+        "ansatz": "qcnn_native",
+        "depth": 2,
+        "group": "core",
+        "n_params": 74,
+        "mean": 0.99,
+        "std": 0.0,
+        "sd_sample": 0.0,
+        "min": 0.99,
+        "max": 0.99,
+        "runs": [
+          0.99,
+          0.99,
+          0.99,
+          0.99,
+          0.99
+        ],
+        "n_distinct": 1
+      },
+      "angle__hardware_efficient__L2": {
+        "encoding": "angle",
+        "ansatz": "hardware_efficient",
+        "depth": 2,
+        "group": "core",
+        "n_params": 38,
+        "mean": 0.9100000000000001,
+        "std": 0.003162277660168382,
+        "sd_sample": 0.0035355339059327407,
+        "min": 0.905,
+        "max": 0.915,
+        "runs": [
+          0.91,
+          0.915,
+          0.91,
+          0.91,
+          0.905
+        ],
+        "n_distinct": 3
+      },
+      "amplitude__qcnn_native__L2": {
+        "encoding": "amplitude",
+        "ansatz": "qcnn_native",
+        "depth": 2,
+        "group": "core",
+        "n_params": 74,
+        "mean": 0.975,
+        "std": 0.008366600265340762,
+        "sd_sample": 0.009354143466934861,
+        "min": 0.965,
+        "max": 0.985,
+        "runs": [
+          0.97,
+          0.965,
+          0.97,
+          0.985,
+          0.985
+        ],
+        "n_distinct": 3
+      },
+      "amplitude__hardware_efficient__L2": {
+        "encoding": "amplitude",
+        "ansatz": "hardware_efficient",
+        "depth": 2,
+        "group": "core",
+        "n_params": 38,
+        "mean": 0.975,
+        "std": 0.0,
+        "sd_sample": 0.0,
+        "min": 0.975,
+        "max": 0.975,
+        "runs": [
+          0.975,
+          0.975,
+          0.975,
+          0.975,
+          0.975
+        ],
+        "n_distinct": 1
+      },
+      "iqp__qcnn_native__L2": {
+        "encoding": "iqp",
+        "ansatz": "qcnn_native",
+        "depth": 2,
+        "group": "core",
+        "n_params": 74,
+        "mean": 0.742,
+        "std": 0.02400000000000002,
+        "sd_sample": 0.0268328157299975,
+        "min": 0.71,
+        "max": 0.77,
+        "runs": [
+          0.77,
+          0.71,
+          0.73,
+          0.77,
+          0.73
+        ],
+        "n_distinct": 3
+      },
+      "iqp__hardware_efficient__L2": {
+        "encoding": "iqp",
+        "ansatz": "hardware_efficient",
+        "depth": 2,
+        "group": "core",
+        "n_params": 38,
+        "mean": 0.665,
+        "std": 0.014491376746189452,
+        "sd_sample": 0.016201851746019666,
+        "min": 0.64,
+        "max": 0.685,
+        "runs": [
+          0.67,
+          0.665,
+          0.665,
+          0.685,
+          0.64
+        ],
+        "n_distinct": 4
+      },
+      "amplitude__qcnn_native__L1": {
+        "encoding": "amplitude",
+        "ansatz": "qcnn_native",
+        "depth": 1,
+        "group": "depth",
+        "n_params": 59,
+        "mean": 0.9639999999999999,
+        "std": 0.0037416573867739447,
+        "sd_sample": 0.004183300132670381,
+        "min": 0.96,
+        "max": 0.97,
+        "runs": [
+          0.965,
+          0.96,
+          0.97,
+          0.965,
+          0.96
+        ],
+        "n_distinct": 3
+      },
+      "amplitude__qcnn_native__L3": {
+        "encoding": "amplitude",
+        "ansatz": "qcnn_native",
+        "depth": 3,
+        "group": "depth",
+        "n_params": 89,
+        "mean": 1.0,
+        "std": 0.0,
+        "sd_sample": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "runs": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n_distinct": 1
+      },
+      "angle__hardware_efficient__L3": {
+        "encoding": "angle",
+        "ansatz": "hardware_efficient",
+        "depth": 3,
+        "group": "capacity",
+        "n_params": 44,
+        "mean": 0.897,
+        "std": 0.015684387141358135,
+        "sd_sample": 0.017535677916750196,
+        "min": 0.875,
+        "max": 0.92,
+        "runs": [
+          0.92,
+          0.885,
+          0.9,
+          0.905,
+          0.875
+        ],
+        "n_distinct": 5
+      },
+      "amplitude__hardware_efficient__L3": {
+        "encoding": "amplitude",
+        "ansatz": "hardware_efficient",
+        "depth": 3,
+        "group": "capacity",
+        "n_params": 44,
+        "mean": 1.0,
+        "std": 0.0,
+        "sd_sample": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "runs": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n_distinct": 1
+      },
+      "iqp__hardware_efficient__L3": {
+        "encoding": "iqp",
+        "ansatz": "hardware_efficient",
+        "depth": 3,
+        "group": "capacity",
+        "n_params": 44,
+        "mean": 0.8019999999999999,
+        "std": 0.00927361849549568,
+        "sd_sample": 0.010368220676663835,
+        "min": 0.79,
+        "max": 0.815,
+        "runs": [
+          0.815,
+          0.81,
+          0.79,
+          0.8,
+          0.795
+        ],
+        "n_distinct": 5
+      }
+    },
+    "encoding_rollup": {
+      "amplitude": {
+        "mean_of_config_means": 0.9827999999999999,
+        "n_configs": 5,
+        "configs": [
+          "amplitude__hardware_efficient__L2",
+          "amplitude__hardware_efficient__L3",
+          "amplitude__qcnn_native__L1",
+          "amplitude__qcnn_native__L2",
+          "amplitude__qcnn_native__L3"
+        ],
+        "confounded": true,
+        "why": "config counts differ across encodings (amplitude owns both depth-study cells); use matched_encoding instead"
+      },
+      "angle": {
+        "mean_of_config_means": 0.9323333333333333,
+        "n_configs": 3,
+        "configs": [
+          "angle__hardware_efficient__L2",
+          "angle__hardware_efficient__L3",
+          "angle__qcnn_native__L2"
+        ],
+        "confounded": true,
+        "why": "config counts differ across encodings (amplitude owns both depth-study cells); use matched_encoding instead"
+      },
+      "iqp": {
+        "mean_of_config_means": 0.7363333333333334,
+        "n_configs": 3,
+        "configs": [
+          "iqp__hardware_efficient__L2",
+          "iqp__hardware_efficient__L3",
+          "iqp__qcnn_native__L2"
+        ],
+        "confounded": true,
+        "why": "config counts differ across encodings (amplitude owns both depth-study cells); use matched_encoding instead"
+      }
+    },
+    "matched_encoding": {
+      "qcnn_native__L2": {
+        "ansatz": "qcnn_native",
+        "depth": 2,
+        "means": {
+          "amplitude": 0.975,
+          "angle": 0.99,
+          "iqp": 0.742
+        },
+        "ranking": [
+          "angle",
+          "amplitude",
+          "iqp"
+        ],
+        "contrasts": {
+          "amplitude_vs_angle": {
+            "a": "amplitude",
+            "b": "angle",
+            "mean_a": 0.975,
+            "mean_b": 0.99,
+            "diffs": [
+              -0.02,
+              -0.025,
+              -0.02,
+              -0.005,
+              -0.005
+            ],
+            "mean_diff": -0.015000000000000013,
+            "sd_diff": 0.009354143466934861,
+            "diff_ci95": [
+              -0.02661470317692597,
+              -0.0033852968230740545
+            ],
+            "paired_t": -3.5856858280031814,
+            "paired_t_p": 0.023050365013243798,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": -1.6035674514745464,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "amplitude_vs_iqp": {
+            "a": "amplitude",
+            "b": "iqp",
+            "mean_a": 0.975,
+            "mean_b": 0.742,
+            "diffs": [
+              0.2,
+              0.255,
+              0.24,
+              0.215,
+              0.255
+            ],
+            "mean_diff": 0.233,
+            "sd_diff": 0.024647515087732497,
+            "diff_ci95": [
+              0.20239606787037848,
+              0.2636039321296215
+            ],
+            "paired_t": 21.138189261795556,
+            "paired_t_p": 2.9609291593343567e-05,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 9.453285622126193,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "angle_vs_iqp": {
+            "a": "angle",
+            "b": "iqp",
+            "mean_a": 0.99,
+            "mean_b": 0.742,
+            "diffs": [
+              0.22,
+              0.28,
+              0.26,
+              0.22,
+              0.26
+            ],
+            "mean_diff": 0.248,
+            "sd_diff": 0.0268328157299975,
+            "diff_ci95": [
+              0.21468265873762646,
+              0.28131734126237357
+            ],
+            "paired_t": 20.666666666666647,
+            "paired_t_p": 3.238328903098735e-05,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 9.242414306999123,
+            "n_seeds": 5,
+            "constant_difference": false
+          }
+        }
+      },
+      "hardware_efficient__L2": {
+        "ansatz": "hardware_efficient",
+        "depth": 2,
+        "means": {
+          "amplitude": 0.975,
+          "angle": 0.9100000000000001,
+          "iqp": 0.665
+        },
+        "ranking": [
+          "amplitude",
+          "angle",
+          "iqp"
+        ],
+        "contrasts": {
+          "amplitude_vs_angle": {
+            "a": "amplitude",
+            "b": "angle",
+            "mean_a": 0.975,
+            "mean_b": 0.9100000000000001,
+            "diffs": [
+              0.065,
+              0.06,
+              0.065,
+              0.065,
+              0.07
+            ],
+            "mean_diff": 0.06499999999999995,
+            "sd_diff": 0.0035355339059327407,
+            "diff_ci95": [
+              0.06061005483457453,
+              0.06938994516542536
+            ],
+            "paired_t": 41.10960958218886,
+            "paired_t_p": 2.0925054023022067e-06,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 18.384776310850203,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "amplitude_vs_iqp": {
+            "a": "amplitude",
+            "b": "iqp",
+            "mean_a": 0.975,
+            "mean_b": 0.665,
+            "diffs": [
+              0.305,
+              0.31,
+              0.31,
+              0.29,
+              0.335
+            ],
+            "mean_diff": 0.30999999999999994,
+            "sd_diff": 0.016201851746019666,
+            "diff_ci95": [
+              0.2898827439827325,
+              0.3301172560172674
+            ],
+            "paired_t": 42.784064679225914,
+            "paired_t_p": 1.7841978759448377e-06,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 19.133615395299376,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "angle_vs_iqp": {
+            "a": "angle",
+            "b": "iqp",
+            "mean_a": 0.9100000000000001,
+            "mean_b": 0.665,
+            "diffs": [
+              0.24,
+              0.25,
+              0.245,
+              0.225,
+              0.265
+            ],
+            "mean_diff": 0.24500000000000002,
+            "sd_diff": 0.014577379737113264,
+            "diff_ci95": [
+              0.22689979239228142,
+              0.26310020760771863
+            ],
+            "paired_t": 37.58128445352112,
+            "paired_t_p": 2.9937640501188733e-06,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 16.806861343965853,
+            "n_seeds": 5,
+            "constant_difference": false
+          }
+        }
+      },
+      "hardware_efficient__L3": {
+        "ansatz": "hardware_efficient",
+        "depth": 3,
+        "means": {
+          "amplitude": 1.0,
+          "angle": 0.897,
+          "iqp": 0.8019999999999999
+        },
+        "ranking": [
+          "amplitude",
+          "angle",
+          "iqp"
+        ],
+        "contrasts": {
+          "amplitude_vs_angle": {
+            "a": "amplitude",
+            "b": "angle",
+            "mean_a": 1.0,
+            "mean_b": 0.897,
+            "diffs": [
+              0.08,
+              0.115,
+              0.1,
+              0.095,
+              0.125
+            ],
+            "mean_diff": 0.10299999999999998,
+            "sd_diff": 0.017535677916750196,
+            "diff_ci95": [
+              0.08122658004667448,
+              0.12477341995332548
+            ],
+            "paired_t": 13.134080289104755,
+            "paired_t_p": 0.00019406729562373976,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 5.8737392696756645,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "amplitude_vs_iqp": {
+            "a": "amplitude",
+            "b": "iqp",
+            "mean_a": 1.0,
+            "mean_b": 0.8019999999999999,
+            "diffs": [
+              0.185,
+              0.19,
+              0.21,
+              0.2,
+              0.205
+            ],
+            "mean_diff": 0.19799999999999998,
+            "sd_diff": 0.010368220676663835,
+            "diff_ci95": [
+              0.18512615366035462,
+              0.21087384633964534
+            ],
+            "paired_t": 42.70177818856172,
+            "paired_t_p": 1.7979650950847737e-06,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 19.096815757948363,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "angle_vs_iqp": {
+            "a": "angle",
+            "b": "iqp",
+            "mean_a": 0.897,
+            "mean_b": 0.8019999999999999,
+            "diffs": [
+              0.105,
+              0.075,
+              0.11,
+              0.105,
+              0.08
+            ],
+            "mean_diff": 0.095,
+            "sd_diff": 0.016201851746019683,
+            "diff_ci95": [
+              0.07488274398273256,
+              0.11511725601726744
+            ],
+            "paired_t": 13.111245627504704,
+            "paired_t_p": 0.00019539703409378212,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 5.863527298559481,
+            "n_seeds": 5,
+            "constant_difference": false
+          }
+        }
+      },
+      "_consistency": {
+        "rankings": [
+          [
+            "angle",
+            "amplitude",
+            "iqp"
+          ],
+          [
+            "amplitude",
+            "angle",
+            "iqp"
+          ],
+          [
+            "amplitude",
+            "angle",
+            "iqp"
+          ]
+        ],
+        "identical_across_strata": false,
+        "iqp_last_everywhere": true,
+        "amplitude_first_everywhere": false
+      }
+    },
+    "ansatz": {
+      "raw_depth2": {
+        "amplitude": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L2",
+          "mean_a": 0.975,
+          "mean_b": 0.975,
+          "diffs": [
+            -0.005,
+            -0.01,
+            -0.005,
+            0.01,
+            0.01
+          ],
+          "mean_diff": 0.0,
+          "sd_diff": 0.009354143466934861,
+          "diff_ci95": [
+            -0.011614703176925959,
+            0.011614703176925959
+          ],
+          "paired_t": 0.0,
+          "paired_t_p": 1.0,
+          "wilcoxon_stat": 7.0,
+          "wilcoxon_p": 1.0,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 0.0,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L2": 38
+          }
+        },
+        "angle": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L2",
+          "mean_a": 0.99,
+          "mean_b": 0.9100000000000001,
+          "diffs": [
+            0.08,
+            0.075,
+            0.08,
+            0.08,
+            0.085
+          ],
+          "mean_diff": 0.07999999999999996,
+          "sd_diff": 0.0035355339059327407,
+          "diff_ci95": [
+            0.07561005483457454,
+            0.08438994516542538
+          ],
+          "paired_t": 50.596442562694,
+          "paired_t_p": 9.131480382511842e-07,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 22.62741699796949,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L2": 38
+          }
+        },
+        "iqp": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L2",
+          "mean_a": 0.742,
+          "mean_b": 0.665,
+          "diffs": [
+            0.1,
+            0.045,
+            0.065,
+            0.085,
+            0.09
+          ],
+          "mean_diff": 0.07699999999999996,
+          "sd_diff": 0.021965882636488816,
+          "diff_ci95": [
+            0.049725754341502615,
+            0.1042742456584973
+          ],
+          "paired_t": 7.838393617813018,
+          "paired_t_p": 0.001430637645150466,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 3.5054361927660826,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L2": 38
+          }
+        }
+      },
+      "capacity_maximised": {
+        "amplitude": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L3",
+          "mean_a": 0.975,
+          "mean_b": 1.0,
+          "diffs": [
+            -0.03,
+            -0.035,
+            -0.03,
+            -0.015,
+            -0.015
+          ],
+          "mean_diff": -0.025000000000000022,
+          "sd_diff": 0.009354143466934861,
+          "diff_ci95": [
+            -0.03661470317692598,
+            -0.013385296823074063
+          ],
+          "paired_t": -5.976143046671969,
+          "paired_t_p": 0.003939628557655477,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": -2.672612419124244,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L3": 44
+          },
+          "residual_param_gap": 30
+        },
+        "angle": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L3",
+          "mean_a": 0.99,
+          "mean_b": 0.897,
+          "diffs": [
+            0.07,
+            0.105,
+            0.09,
+            0.085,
+            0.115
+          ],
+          "mean_diff": 0.09299999999999997,
+          "sd_diff": 0.017535677916750196,
+          "diff_ci95": [
+            0.07122658004667447,
+            0.11477341995332548
+          ],
+          "paired_t": 11.858926862978079,
+          "paired_t_p": 0.00028950610063674094,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 5.303473321163464,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L3": 44
+          },
+          "residual_param_gap": 30
+        },
+        "iqp": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L3",
+          "mean_a": 0.742,
+          "mean_b": 0.8019999999999999,
+          "diffs": [
+            -0.045,
+            -0.1,
+            -0.06,
+            -0.03,
+            -0.065
+          ],
+          "mean_diff": -0.06000000000000003,
+          "sd_diff": 0.026220221204253828,
+          "diff_ci95": [
+            -0.09255670469426094,
+            -0.027443295305739114
+          ],
+          "paired_t": -5.116817192534645,
+          "paired_t_p": 0.006901375542017499,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": -2.2883102141894196,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L3": 44
+          },
+          "residual_param_gap": 30
+        }
+      },
+      "_note": "HEA at its own depth ceiling (44 params) still does not reach qcnn_native@L2 (74). Depth-matching is architecturally impossible at 6 qubits; the residual gap is disclosed, not claimed away."
+    },
+    "depth": {
+      "depths": {
+        "1": {
+          "mean": 0.9639999999999999,
+          "std": 0.0037416573867739447,
+          "n_params": 59
+        },
+        "2": {
+          "mean": 0.975,
+          "std": 0.008366600265340762,
+          "n_params": 74
+        },
+        "3": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_params": 89
+        }
+      },
+      "contrasts": {
+        "L2_vs_L1": {
+          "a": "L2",
+          "b": "L1",
+          "mean_a": 0.975,
+          "mean_b": 0.9639999999999999,
+          "diffs": [
+            0.005,
+            0.005,
+            0.0,
+            0.02,
+            0.025
+          ],
+          "mean_diff": 0.01100000000000001,
+          "sd_diff": 0.010839741694339409,
+          "diff_ci95": [
+            -0.0024593170116895043,
+            0.024459317011689526
+          ],
+          "paired_t": 2.2691267417693455,
+          "paired_t_p": 0.08581037844004435,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.125,
+          "wilcoxon_twosided_floor": 0.125,
+          "cohen_dz": 1.0147843288317737,
+          "n_seeds": 5,
+          "constant_difference": false
+        },
+        "L3_vs_L2": {
+          "a": "L3",
+          "b": "L2",
+          "mean_a": 1.0,
+          "mean_b": 0.975,
+          "diffs": [
+            0.03,
+            0.035,
+            0.03,
+            0.015,
+            0.015
+          ],
+          "mean_diff": 0.025000000000000022,
+          "sd_diff": 0.009354143466934861,
+          "diff_ci95": [
+            0.013385296823074063,
+            0.03661470317692598
+          ],
+          "paired_t": 5.976143046671969,
+          "paired_t_p": 0.003939628557655477,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 2.672612419124244,
+          "n_seeds": 5,
+          "constant_difference": false
+        },
+        "L3_vs_L1": {
+          "a": "L3",
+          "b": "L1",
+          "mean_a": 1.0,
+          "mean_b": 0.9639999999999999,
+          "diffs": [
+            0.035,
+            0.04,
+            0.03,
+            0.035,
+            0.04
+          ],
+          "mean_diff": 0.03600000000000003,
+          "sd_diff": 0.004183300132670382,
+          "diff_ci95": [
+            0.030805746831582187,
+            0.04119425316841788
+          ],
+          "paired_t": 19.242809417694556,
+          "paired_t_p": 4.298316960189264e-05,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 8.605645987207634,
+          "n_seeds": 5,
+          "constant_difference": false
+        }
+      },
+      "_note": "Pooling halves the active qubits each layer (6->3->2->1), so depth>=3 is architecturally identical at 6 qubits; [1,2,3] is the complete non-degenerate range, not a truncated sweep."
+    },
+    "zero_variance": {
+      "n_zero_variance": 4,
+      "n_configs": 11,
+      "cells": [
+        {
+          "config": "amplitude__qcnn_native__L3",
+          "value": 1.0,
+          "at_perfect_accuracy": true,
+          "n_test_items_missed": 0,
+          "note": "all 5 seeds land on 1.0000 = 200/200 test items"
+        },
+        {
+          "config": "amplitude__hardware_efficient__L3",
+          "value": 1.0,
+          "at_perfect_accuracy": true,
+          "n_test_items_missed": 0,
+          "note": "all 5 seeds land on 1.0000 = 200/200 test items"
+        },
+        {
+          "config": "angle__qcnn_native__L2",
+          "value": 0.99,
+          "at_perfect_accuracy": false,
+          "n_test_items_missed": 2,
+          "note": "all 5 seeds land on 0.9900 = 198/200 test items"
+        },
+        {
+          "config": "amplitude__hardware_efficient__L2",
+          "value": 0.975,
+          "at_perfect_accuracy": false,
+          "n_test_items_missed": 5,
+          "note": "all 5 seeds land on 0.9750 = 195/200 test items"
+        }
+      ],
+      "spread_of_all_cells": {
+        "angle__qcnn_native__L2": 0.0,
+        "angle__hardware_efficient__L2": 0.003162277660168382,
+        "amplitude__qcnn_native__L2": 0.008366600265340762,
+        "amplitude__hardware_efficient__L2": 0.0,
+        "iqp__qcnn_native__L2": 0.02400000000000002,
+        "iqp__hardware_efficient__L2": 0.014491376746189452,
+        "amplitude__qcnn_native__L1": 0.0037416573867739447,
+        "amplitude__qcnn_native__L3": 0.0,
+        "angle__hardware_efficient__L3": 0.015684387141358135,
+        "amplitude__hardware_efficient__L3": 0.0,
+        "iqp__hardware_efficient__L3": 0.00927361849549568
+      }
+    }
+  },
+  "fashion_mnist": {
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "epochs": 50,
+    "n_train": 500,
+    "n_test": 200,
+    "per_config": {
+      "angle__qcnn_native__L2": {
+        "encoding": "angle",
+        "ansatz": "qcnn_native",
+        "depth": 2,
+        "group": "core",
+        "n_params": 74,
+        "mean": 0.951,
+        "std": 0.0058309518948453055,
+        "sd_sample": 0.006519202405202654,
+        "min": 0.945,
+        "max": 0.96,
+        "runs": [
+          0.945,
+          0.95,
+          0.96,
+          0.945,
+          0.955
+        ],
+        "n_distinct": 4
+      },
+      "angle__hardware_efficient__L2": {
+        "encoding": "angle",
+        "ansatz": "hardware_efficient",
+        "depth": 2,
+        "group": "core",
+        "n_params": 38,
+        "mean": 0.913,
+        "std": 0.00244948974278318,
+        "sd_sample": 0.002738612787525833,
+        "min": 0.91,
+        "max": 0.915,
+        "runs": [
+          0.91,
+          0.915,
+          0.915,
+          0.915,
+          0.91
+        ],
+        "n_distinct": 2
+      },
+      "amplitude__qcnn_native__L2": {
+        "encoding": "amplitude",
+        "ansatz": "qcnn_native",
+        "depth": 2,
+        "group": "core",
+        "n_params": 74,
+        "mean": 0.9509999999999998,
+        "std": 0.004898979485566361,
+        "sd_sample": 0.0054772255750516665,
+        "min": 0.945,
+        "max": 0.96,
+        "runs": [
+          0.95,
+          0.95,
+          0.95,
+          0.945,
+          0.96
+        ],
+        "n_distinct": 3
+      },
+      "amplitude__hardware_efficient__L2": {
+        "encoding": "amplitude",
+        "ansatz": "hardware_efficient",
+        "depth": 2,
+        "group": "core",
+        "n_params": 38,
+        "mean": 0.9219999999999999,
+        "std": 0.0040000000000000036,
+        "sd_sample": 0.004472135954999583,
+        "min": 0.915,
+        "max": 0.925,
+        "runs": [
+          0.92,
+          0.915,
+          0.925,
+          0.925,
+          0.925
+        ],
+        "n_distinct": 3
+      },
+      "iqp__qcnn_native__L2": {
+        "encoding": "iqp",
+        "ansatz": "qcnn_native",
+        "depth": 2,
+        "group": "core",
+        "n_params": 74,
+        "mean": 0.694,
+        "std": 0.035832945734337825,
+        "sd_sample": 0.04006245124802025,
+        "min": 0.635,
+        "max": 0.745,
+        "runs": [
+          0.745,
+          0.695,
+          0.685,
+          0.635,
+          0.71
+        ],
+        "n_distinct": 5
+      },
+      "iqp__hardware_efficient__L2": {
+        "encoding": "iqp",
+        "ansatz": "hardware_efficient",
+        "depth": 2,
+        "group": "core",
+        "n_params": 38,
+        "mean": 0.626,
+        "std": 0.0058309518948453055,
+        "sd_sample": 0.006519202405202654,
+        "min": 0.62,
+        "max": 0.635,
+        "runs": [
+          0.625,
+          0.63,
+          0.62,
+          0.635,
+          0.62
+        ],
+        "n_distinct": 4
+      },
+      "amplitude__qcnn_native__L1": {
+        "encoding": "amplitude",
+        "ansatz": "qcnn_native",
+        "depth": 1,
+        "group": "depth",
+        "n_params": 59,
+        "mean": 0.9119999999999999,
+        "std": 0.00509901951359279,
+        "sd_sample": 0.005700877125495695,
+        "min": 0.905,
+        "max": 0.92,
+        "runs": [
+          0.905,
+          0.915,
+          0.91,
+          0.92,
+          0.91
+        ],
+        "n_distinct": 4
+      },
+      "amplitude__qcnn_native__L3": {
+        "encoding": "amplitude",
+        "ansatz": "qcnn_native",
+        "depth": 3,
+        "group": "depth",
+        "n_params": 89,
+        "mean": 0.954,
+        "std": 0.00489897948556636,
+        "sd_sample": 0.005477225575051666,
+        "min": 0.945,
+        "max": 0.96,
+        "runs": [
+          0.945,
+          0.955,
+          0.955,
+          0.96,
+          0.955
+        ],
+        "n_distinct": 3
+      },
+      "angle__hardware_efficient__L3": {
+        "encoding": "angle",
+        "ansatz": "hardware_efficient",
+        "depth": 3,
+        "group": "capacity",
+        "n_params": 44,
+        "mean": 0.913,
+        "std": 0.0040000000000000036,
+        "sd_sample": 0.004472135954999583,
+        "min": 0.91,
+        "max": 0.92,
+        "runs": [
+          0.915,
+          0.91,
+          0.91,
+          0.91,
+          0.92
+        ],
+        "n_distinct": 3
+      },
+      "amplitude__hardware_efficient__L3": {
+        "encoding": "amplitude",
+        "ansatz": "hardware_efficient",
+        "depth": 3,
+        "group": "capacity",
+        "n_params": 44,
+        "mean": 0.9419999999999998,
+        "std": 0.00244948974278318,
+        "sd_sample": 0.002738612787525833,
+        "min": 0.94,
+        "max": 0.945,
+        "runs": [
+          0.945,
+          0.94,
+          0.94,
+          0.945,
+          0.94
+        ],
+        "n_distinct": 2
+      },
+      "iqp__hardware_efficient__L3": {
+        "encoding": "iqp",
+        "ansatz": "hardware_efficient",
+        "depth": 3,
+        "group": "capacity",
+        "n_params": 44,
+        "mean": 0.8160000000000001,
+        "std": 0.011575836902790182,
+        "sd_sample": 0.012942179105544736,
+        "min": 0.805,
+        "max": 0.83,
+        "runs": [
+          0.83,
+          0.83,
+          0.81,
+          0.805,
+          0.805
+        ],
+        "n_distinct": 3
+      }
+    },
+    "encoding_rollup": {
+      "amplitude": {
+        "mean_of_config_means": 0.9362,
+        "n_configs": 5,
+        "configs": [
+          "amplitude__hardware_efficient__L2",
+          "amplitude__hardware_efficient__L3",
+          "amplitude__qcnn_native__L1",
+          "amplitude__qcnn_native__L2",
+          "amplitude__qcnn_native__L3"
+        ],
+        "confounded": true,
+        "why": "config counts differ across encodings (amplitude owns both depth-study cells); use matched_encoding instead"
+      },
+      "angle": {
+        "mean_of_config_means": 0.9256666666666667,
+        "n_configs": 3,
+        "configs": [
+          "angle__hardware_efficient__L2",
+          "angle__hardware_efficient__L3",
+          "angle__qcnn_native__L2"
+        ],
+        "confounded": true,
+        "why": "config counts differ across encodings (amplitude owns both depth-study cells); use matched_encoding instead"
+      },
+      "iqp": {
+        "mean_of_config_means": 0.7120000000000001,
+        "n_configs": 3,
+        "configs": [
+          "iqp__hardware_efficient__L2",
+          "iqp__hardware_efficient__L3",
+          "iqp__qcnn_native__L2"
+        ],
+        "confounded": true,
+        "why": "config counts differ across encodings (amplitude owns both depth-study cells); use matched_encoding instead"
+      }
+    },
+    "matched_encoding": {
+      "qcnn_native__L2": {
+        "ansatz": "qcnn_native",
+        "depth": 2,
+        "means": {
+          "amplitude": 0.9509999999999998,
+          "angle": 0.951,
+          "iqp": 0.694
+        },
+        "ranking": [
+          "angle",
+          "amplitude",
+          "iqp"
+        ],
+        "contrasts": {
+          "amplitude_vs_angle": {
+            "a": "amplitude",
+            "b": "angle",
+            "mean_a": 0.9509999999999998,
+            "mean_b": 0.951,
+            "diffs": [
+              0.005,
+              0.0,
+              -0.01,
+              0.0,
+              0.005
+            ],
+            "mean_diff": 0.0,
+            "sd_diff": 0.006123724356957951,
+            "diff_ci95": [
+              -0.007603608068958183,
+              0.007603608068958183
+            ],
+            "paired_t": 0.0,
+            "paired_t_p": 1.0,
+            "wilcoxon_stat": 3.0,
+            "wilcoxon_p": 1.0,
+            "wilcoxon_twosided_floor": 0.25,
+            "cohen_dz": 0.0,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "amplitude_vs_iqp": {
+            "a": "amplitude",
+            "b": "iqp",
+            "mean_a": 0.9509999999999998,
+            "mean_b": 0.694,
+            "diffs": [
+              0.205,
+              0.255,
+              0.265,
+              0.31,
+              0.25
+            ],
+            "mean_diff": 0.25699999999999995,
+            "sd_diff": 0.03751666296460813,
+            "diff_ci95": [
+              0.21041691026410153,
+              0.30358308973589837
+            ],
+            "paired_t": 15.317712845611252,
+            "paired_t_p": 0.00010595843351055058,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 6.8502894365217,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "angle_vs_iqp": {
+            "a": "angle",
+            "b": "iqp",
+            "mean_a": 0.951,
+            "mean_b": 0.694,
+            "diffs": [
+              0.2,
+              0.255,
+              0.275,
+              0.31,
+              0.245
+            ],
+            "mean_diff": 0.25699999999999995,
+            "sd_diff": 0.040404207701673835,
+            "diff_ci95": [
+              0.20683154992088432,
+              0.3071684500791156
+            ],
+            "paired_t": 14.223010495850879,
+            "paired_t_p": 0.00014190793670399145,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 6.360723662683111,
+            "n_seeds": 5,
+            "constant_difference": false
+          }
+        }
+      },
+      "hardware_efficient__L2": {
+        "ansatz": "hardware_efficient",
+        "depth": 2,
+        "means": {
+          "amplitude": 0.9219999999999999,
+          "angle": 0.913,
+          "iqp": 0.626
+        },
+        "ranking": [
+          "amplitude",
+          "angle",
+          "iqp"
+        ],
+        "contrasts": {
+          "amplitude_vs_angle": {
+            "a": "amplitude",
+            "b": "angle",
+            "mean_a": 0.9219999999999999,
+            "mean_b": 0.913,
+            "diffs": [
+              0.01,
+              0.0,
+              0.01,
+              0.01,
+              0.015
+            ],
+            "mean_diff": 0.009000000000000008,
+            "sd_diff": 0.005477225575051666,
+            "diff_ci95": [
+              0.002199126193417446,
+              0.01580087380658257
+            ],
+            "paired_t": 3.6742346141747677,
+            "paired_t_p": 0.02131164112875671,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.125,
+            "wilcoxon_twosided_floor": 0.125,
+            "cohen_dz": 1.6431676725154984,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "amplitude_vs_iqp": {
+            "a": "amplitude",
+            "b": "iqp",
+            "mean_a": 0.9219999999999999,
+            "mean_b": 0.626,
+            "diffs": [
+              0.295,
+              0.285,
+              0.305,
+              0.29,
+              0.305
+            ],
+            "mean_diff": 0.2960000000000001,
+            "sd_diff": 0.008944271909999168,
+            "diff_ci95": [
+              0.2848942195792089,
+              0.3071057804207913
+            ],
+            "paired_t": 73.99999999999996,
+            "paired_t_p": 1.9984617100335183e-07,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 33.09380606699686,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "angle_vs_iqp": {
+            "a": "angle",
+            "b": "iqp",
+            "mean_a": 0.913,
+            "mean_b": 0.626,
+            "diffs": [
+              0.285,
+              0.285,
+              0.295,
+              0.28,
+              0.29
+            ],
+            "mean_diff": 0.28700000000000003,
+            "sd_diff": 0.005700877125495695,
+            "diff_ci95": [
+              0.2799214261150887,
+              0.2940785738849114
+            ],
+            "paired_t": 112.57066156931754,
+            "paired_t_p": 3.734409457381766e-08,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 50.343130308223444,
+            "n_seeds": 5,
+            "constant_difference": false
+          }
+        }
+      },
+      "hardware_efficient__L3": {
+        "ansatz": "hardware_efficient",
+        "depth": 3,
+        "means": {
+          "amplitude": 0.9419999999999998,
+          "angle": 0.913,
+          "iqp": 0.8160000000000001
+        },
+        "ranking": [
+          "amplitude",
+          "angle",
+          "iqp"
+        ],
+        "contrasts": {
+          "amplitude_vs_angle": {
+            "a": "amplitude",
+            "b": "angle",
+            "mean_a": 0.9419999999999998,
+            "mean_b": 0.913,
+            "diffs": [
+              0.03,
+              0.03,
+              0.03,
+              0.035,
+              0.02
+            ],
+            "mean_diff": 0.028999999999999915,
+            "sd_diff": 0.005477225575051666,
+            "diff_ci95": [
+              0.02219912619341735,
+              0.03580087380658248
+            ],
+            "paired_t": 11.839200423451983,
+            "paired_t_p": 0.0002913955752218866,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 5.294651389216586,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "amplitude_vs_iqp": {
+            "a": "amplitude",
+            "b": "iqp",
+            "mean_a": 0.9419999999999998,
+            "mean_b": 0.8160000000000001,
+            "diffs": [
+              0.115,
+              0.11,
+              0.13,
+              0.14,
+              0.135
+            ],
+            "mean_diff": 0.12599999999999995,
+            "sd_diff": 0.012942179105544738,
+            "diff_ci95": [
+              0.10993016214634005,
+              0.14206983785365984
+            ],
+            "paired_t": 21.769484324650342,
+            "paired_t_p": 2.634352470586902e-05,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 9.735609357006854,
+            "n_seeds": 5,
+            "constant_difference": false
+          },
+          "angle_vs_iqp": {
+            "a": "angle",
+            "b": "iqp",
+            "mean_a": 0.913,
+            "mean_b": 0.8160000000000001,
+            "diffs": [
+              0.085,
+              0.08,
+              0.1,
+              0.105,
+              0.115
+            ],
+            "mean_diff": 0.09700000000000002,
+            "sd_diff": 0.01440486029088789,
+            "diff_ci95": [
+              0.07911400357764953,
+              0.1148859964223505
+            ],
+            "paired_t": 15.057320198702904,
+            "paired_t_p": 0.00011336970956881475,
+            "wilcoxon_stat": 0.0,
+            "wilcoxon_p": 0.0625,
+            "wilcoxon_twosided_floor": 0.0625,
+            "cohen_dz": 6.733838304656067,
+            "n_seeds": 5,
+            "constant_difference": false
+          }
+        }
+      },
+      "_consistency": {
+        "rankings": [
+          [
+            "angle",
+            "amplitude",
+            "iqp"
+          ],
+          [
+            "amplitude",
+            "angle",
+            "iqp"
+          ],
+          [
+            "amplitude",
+            "angle",
+            "iqp"
+          ]
+        ],
+        "identical_across_strata": false,
+        "iqp_last_everywhere": true,
+        "amplitude_first_everywhere": false
+      }
+    },
+    "ansatz": {
+      "raw_depth2": {
+        "amplitude": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L2",
+          "mean_a": 0.9509999999999998,
+          "mean_b": 0.9219999999999999,
+          "diffs": [
+            0.03,
+            0.035,
+            0.025,
+            0.02,
+            0.035
+          ],
+          "mean_diff": 0.028999999999999915,
+          "sd_diff": 0.006519202405202654,
+          "diff_ci95": [
+            0.02090534107645639,
+            0.03709465892354344
+          ],
+          "paired_t": 9.946917938265475,
+          "paired_t_p": 0.0005737023397820961,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 4.448396935314731,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L2": 38
+          }
+        },
+        "angle": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L2",
+          "mean_a": 0.951,
+          "mean_b": 0.913,
+          "diffs": [
+            0.035,
+            0.035,
+            0.045,
+            0.03,
+            0.045
+          ],
+          "mean_diff": 0.03799999999999992,
+          "sd_diff": 0.006708203932499375,
+          "diff_ci95": [
+            0.029670664684406538,
+            0.04632933531559331
+          ],
+          "paired_t": 12.66666666666663,
+          "paired_t_p": 0.0002237013088206484,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 5.664705542999451,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L2": 38
+          }
+        },
+        "iqp": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L2",
+          "mean_a": 0.694,
+          "mean_b": 0.626,
+          "diffs": [
+            0.12,
+            0.065,
+            0.065,
+            0.0,
+            0.09
+          ],
+          "mean_diff": 0.06799999999999999,
+          "sd_diff": 0.04424364361125787,
+          "diff_ci95": [
+            0.013064260578543124,
+            0.12293573942145686
+          ],
+          "paired_t": 3.4367111308910285,
+          "paired_t_p": 0.026373010277296292,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.125,
+          "wilcoxon_twosided_floor": 0.125,
+          "cohen_dz": 1.5369439415405035,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L2": 38
+          }
+        }
+      },
+      "capacity_maximised": {
+        "amplitude": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L3",
+          "mean_a": 0.9509999999999998,
+          "mean_b": 0.9419999999999998,
+          "diffs": [
+            0.005,
+            0.01,
+            0.01,
+            0.0,
+            0.02
+          ],
+          "mean_diff": 0.009000000000000008,
+          "sd_diff": 0.007416198487095669,
+          "diff_ci95": [
+            -0.00020842666495990772,
+            0.018208426664959924
+          ],
+          "paired_t": 2.7136021011998723,
+          "paired_t_p": 0.05333826104568904,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.125,
+          "wilcoxon_twosided_floor": 0.125,
+          "cohen_dz": 1.2135597524338357,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L3": 44
+          },
+          "residual_param_gap": 30
+        },
+        "angle": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L3",
+          "mean_a": 0.951,
+          "mean_b": 0.913,
+          "diffs": [
+            0.03,
+            0.04,
+            0.05,
+            0.035,
+            0.035
+          ],
+          "mean_diff": 0.03799999999999992,
+          "sd_diff": 0.007582875444051557,
+          "diff_ci95": [
+            0.028584616558257725,
+            0.04741538344174212
+          ],
+          "paired_t": 11.20558866777215,
+          "paired_t_p": 0.0003611596606582789,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 5.011291597807967,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L3": 44
+          },
+          "residual_param_gap": 30
+        },
+        "iqp": {
+          "a": "qcnn_native_L2",
+          "b": "hea_L3",
+          "mean_a": 0.694,
+          "mean_b": 0.8160000000000001,
+          "diffs": [
+            -0.085,
+            -0.135,
+            -0.125,
+            -0.17,
+            -0.095
+          ],
+          "mean_diff": -0.12200000000000003,
+          "sd_diff": 0.033837848631377274,
+          "diff_ci95": [
+            -0.1640152384222497,
+            -0.07998476157775036
+          ],
+          "paired_t": -8.061986925552095,
+          "paired_t_p": 0.001285582412822578,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": -3.6054301598498038,
+          "n_seeds": 5,
+          "constant_difference": false,
+          "n_params": {
+            "qcnn_native_L2": 74,
+            "hea_L3": 44
+          },
+          "residual_param_gap": 30
+        }
+      },
+      "_note": "HEA at its own depth ceiling (44 params) still does not reach qcnn_native@L2 (74). Depth-matching is architecturally impossible at 6 qubits; the residual gap is disclosed, not claimed away."
+    },
+    "depth": {
+      "depths": {
+        "1": {
+          "mean": 0.9119999999999999,
+          "std": 0.00509901951359279,
+          "n_params": 59
+        },
+        "2": {
+          "mean": 0.9509999999999998,
+          "std": 0.004898979485566361,
+          "n_params": 74
+        },
+        "3": {
+          "mean": 0.954,
+          "std": 0.00489897948556636,
+          "n_params": 89
+        }
+      },
+      "contrasts": {
+        "L2_vs_L1": {
+          "a": "L2",
+          "b": "L1",
+          "mean_a": 0.9509999999999998,
+          "mean_b": 0.9119999999999999,
+          "diffs": [
+            0.045,
+            0.035,
+            0.04,
+            0.025,
+            0.05
+          ],
+          "mean_diff": 0.038999999999999924,
+          "sd_diff": 0.00961769203083568,
+          "diff_ci95": [
+            0.027058058059500012,
+            0.050941941940499835
+          ],
+          "paired_t": 9.067315822017878,
+          "paired_t_p": 0.0008200047868877625,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 4.055026910298272,
+          "n_seeds": 5,
+          "constant_difference": false
+        },
+        "L3_vs_L2": {
+          "a": "L3",
+          "b": "L2",
+          "mean_a": 0.954,
+          "mean_b": 0.9509999999999998,
+          "diffs": [
+            -0.005,
+            0.005,
+            0.005,
+            0.015,
+            -0.005
+          ],
+          "mean_diff": 0.0030000000000000027,
+          "sd_diff": 0.008366600265340763,
+          "diff_ci95": [
+            -0.007388506336835684,
+            0.01338850633683569
+          ],
+          "paired_t": 0.8017837257372732,
+          "paired_t_p": 0.4676047546093972,
+          "wilcoxon_stat": 5.0,
+          "wilcoxon_p": 0.75,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 0.35856858280031806,
+          "n_seeds": 5,
+          "constant_difference": false
+        },
+        "L3_vs_L1": {
+          "a": "L3",
+          "b": "L1",
+          "mean_a": 0.954,
+          "mean_b": 0.9119999999999999,
+          "diffs": [
+            0.04,
+            0.04,
+            0.045,
+            0.04,
+            0.045
+          ],
+          "mean_diff": 0.041999999999999926,
+          "sd_diff": 0.002738612787525833,
+          "diff_ci95": [
+            0.038599563096708644,
+            0.04540043690329121
+          ],
+          "paired_t": 34.2928563989644,
+          "paired_t_p": 4.313984930783846e-06,
+          "wilcoxon_stat": 0.0,
+          "wilcoxon_p": 0.0625,
+          "wilcoxon_twosided_floor": 0.0625,
+          "cohen_dz": 15.336231610144612,
+          "n_seeds": 5,
+          "constant_difference": false
+        }
+      },
+      "_note": "Pooling halves the active qubits each layer (6->3->2->1), so depth>=3 is architecturally identical at 6 qubits; [1,2,3] is the complete non-degenerate range, not a truncated sweep."
+    },
+    "zero_variance": {
+      "n_zero_variance": 0,
+      "n_configs": 11,
+      "cells": [],
+      "spread_of_all_cells": {
+        "angle__qcnn_native__L2": 0.0058309518948453055,
+        "angle__hardware_efficient__L2": 0.00244948974278318,
+        "amplitude__qcnn_native__L2": 0.004898979485566361,
+        "amplitude__hardware_efficient__L2": 0.0040000000000000036,
+        "iqp__qcnn_native__L2": 0.035832945734337825,
+        "iqp__hardware_efficient__L2": 0.0058309518948453055,
+        "amplitude__qcnn_native__L1": 0.00509901951359279,
+        "amplitude__qcnn_native__L3": 0.00489897948556636,
+        "angle__hardware_efficient__L3": 0.0040000000000000036,
+        "amplitude__hardware_efficient__L3": 0.00244948974278318,
+        "iqp__hardware_efficient__L3": 0.011575836902790182
+      }
+    }
+  },
+  "cross_dataset": {
+    "amplitude_over_angle_by_stratum": {
+      "qcnn_native__L2": {
+        "mnist": -0.015000000000000013,
+        "fashion_mnist": 0.0
+      },
+      "hardware_efficient__L2": {
+        "mnist": 0.06499999999999995,
+        "fashion_mnist": 0.009000000000000008
+      },
+      "hardware_efficient__L3": {
+        "mnist": 0.10299999999999998,
+        "fashion_mnist": 0.028999999999999915
+      }
+    },
+    "zero_variance_counts": {
+      "mnist": 4,
+      "fashion_mnist": 0
+    },
+    "ceiling_note": "MNIST 0-vs-1 saturates (two configs reach 1.0000), which flatters whichever encoding is ahead and compresses every contrast at the top of the range. Fashion-MNIST is the more informative dataset and should carry the argument."
+  }
+}

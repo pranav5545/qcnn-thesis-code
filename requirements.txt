@@ -1,0 +1,19 @@
+# Pinned environment for the CST4990 QCNN experiments.
+# Captured 2026-08-25 from the conda env `thesis` that produced every result in ch4.
+# Create with:  conda create -n thesis python=3.11 && pip install -r requirements-thesis.txt
+#
+# python 3.11.15
+#
+# NOTE: scikit-learn is deliberately absent. PCA is hand-rolled in
+# utils/dataset.py::_pca_fit_transform to avoid the dependency; see Appendix G.
+# torch is the +cu126 build but every reported result ran on CPU (see Appendix G).
+
+autograd==1.8.0
+matplotlib==3.11.0
+networkx==3.6.1
+numpy==2.4.4
+pennylane==0.44.1
+pennylane_lightning==0.44.0
+scipy==1.17.1
+torch==2.12.1+cu126
+torchvision==0.27.1+cu126

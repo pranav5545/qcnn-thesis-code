@@ -1,0 +1,16 @@
+=== re-evaluating on the enlarged test set ===
+  resuming — 6 models already done
+  mnist: 195 models, 2115 test images
+    [7/195] qcnn_teacher_seed43.pt   53.5s  acc(full)=0.9773
+    [8/195] qcnn_teacher_seed44.pt   88.1s  acc(full)=0.9801
+    [9/195] qcnn_teacher_seed45.pt   77.6s  acc(full)=0.9835
+    [10/195] qcnn_teacher_seed46.pt   34.3s  acc(full)=0.9877
+    [50/195] students/r1_hard_a0.0_T4.0_n200_s46.pt    0.1s  acc(full)=0.9825
+    [100/195] students/r2_ckd_a0.9_T4.0_nfull_s46.pt    0.1s  acc(full)=0.9948
+    [150/195] students/r4_ckd_a0.9_T4.0_nfull_s46.pt    0.5s  acc(full)=0.9943
+  mnist done in 4.8 min -> results\rq4\reeval\mnist_logits.pt
+
+=== verification gate: prefix must reproduce published numbers ===
+  mnist: all 195 models reproduce their recorded 200-image accuracy exactly
+
+GATE PASSED

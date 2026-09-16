@@ -1,0 +1,27 @@
+[full mode] seeds=5  epochs=50  n_train=500  n_test=200
+
+RQ2 config grid (8 distinct cells):
+   angle__qcnn_native__L2                   [core]
+   angle__hardware_efficient__L2            [core]
+   amplitude__qcnn_native__L2               [core]
+   amplitude__hardware_efficient__L2        [core]
+   iqp__qcnn_native__L2                     [core]
+   iqp__hardware_efficient__L2              [core]
+   amplitude__qcnn_native__L1               [depth]
+   amplitude__qcnn_native__L3               [depth]
+
+==================================================================
+  RQ2  Dataset: MNIST
+==================================================================
+  Train: n=500, input_dim=64, classes=[0, 1]
+  Test : n=200, input_dim=64, classes=[0, 1]
+
+  [1/8] angle__qcnn_native__L2  (core)
+      seed 42: test_acc=0.560  n_params=74  (7.9 min)
+Saved → results\rq2\mnist_checkpoint.json
+      seed 43: test_acc=0.565  n_params=74  (7.9 min)
+Saved → results\rq2\mnist_checkpoint.json
+      seed 44: test_acc=0.565  n_params=74  (7.9 min)
+Saved → results\rq2\mnist_checkpoint.json
+      seed 45: test_acc=0.580  n_params=74  (16.3 min)
+Saved → results\rq2\mnist_checkpoint.json

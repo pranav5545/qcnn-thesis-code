@@ -1,0 +1,72 @@
+==============================================================================
+RQ4 — KNOWLEDGE DISTILLATION AS A SIMULABILITY PROBE
+==============================================================================
+
+teacher cells present : 10/10
+student cells present : 370/370
+
+------------------------------------------------------------------------------
+TEACHERS
+------------------------------------------------------------------------------
+  MNIST
+    qcnn  accuracy   0.9750 ± 0.0084  (n=5)
+    cnn   accuracy   0.9940 ± 0.0037  (n=5)
+    qcnn  ceiling    0.9820 ± 0.0119  [0.9650, 1.0000] over 10 seed pairs
+    cnn   ceiling    0.9910 ± 0.0058  [0.9800, 1.0000] over 10 seed pairs
+  Fashion-MNIST
+    qcnn  accuracy   0.9510 ± 0.0049  (n=5)
+    cnn   accuracy   0.9470 ± 0.0144  (n=5)
+    qcnn  ceiling    0.9700 ± 0.0122  [0.9450, 0.9850] over 10 seed pairs
+    cnn   ceiling    0.9480 ± 0.0135  [0.9250, 0.9650] over 10 seed pairs
+
+  The ceiling is agreement between two independently-seeded teachers of the same
+  kind. Every student fidelity number below must be read against it: a student
+  cannot reasonably be asked to match its teacher more closely than a second
+  teacher does.
+
+------------------------------------------------------------------------------
+CAPACITY LADDER — the headline
+------------------------------------------------------------------------------
+  MNIST / QCNN teacher (α=1.0)
+    rung 1     71 params   agreement 0.9850 ± 0.0084
+    rung 2    148 params   agreement 0.9890 ± 0.0102
+    rung 3    342 params   agreement 0.9940 ± 0.0049
+    rung 4    798 params   agreement 0.9960 ± 0.0020
+    rung 5   1501 params   agreement 0.9910 ± 0.0092
+    VERDICT: REACHES CEILING
+      the top rung's agreement is within 1 point of the teacher-teacher ceiling: the student absorbs the teacher's function about as well as another teacher does. Supports the simulability reading.
+
+  MNIST / CNN teacher (α=1.0)
+    rung 1     71 params   agreement 0.9970 ± 0.0040
+    rung 2    148 params   agreement 0.9950 ± 0.0045
+    rung 3    342 params   agreement 0.9970 ± 0.0040
+    rung 4    798 params   agreement 0.9960 ± 0.0058
+    rung 5   1501 params   agreement 0.9960 ± 0.0037
+    VERDICT: REACHES CEILING
+      the top rung's agreement is within 1 point of the teacher-teacher ceiling: the student absorbs the teacher's function about as well as another teacher does. Supports the simulability reading.
+
+  Fashion-MNIST / QCNN teacher (α=1.0)
+    rung 1     71 params   agreement 0.9390 ± 0.0185
+    rung 2    148 params   agreement 0.9520 ± 0.0175
+    rung 3    342 params   agreement 0.9630 ± 0.0051
+    rung 4    798 params   agreement 0.9700 ± 0.0176
+    rung 5   1501 params   agreement 0.9590 ± 0.0132
+    VERDICT: RISES
+      agreement increases with student capacity without reaching the ceiling: capacity is a binding constraint, and the gap at the top rung is the quantity to report.
+
+  Fashion-MNIST / CNN teacher (α=1.0)
+    rung 1     71 params   agreement 0.9740 ± 0.0326
+    rung 2    148 params   agreement 0.9660 ± 0.0150
+    rung 3    342 params   agreement 0.9650 ± 0.0176
+    rung 4    798 params   agreement 0.9690 ± 0.0116
+    rung 5   1501 params   agreement 0.9680 ± 0.0112
+    VERDICT: REACHES CEILING
+      the top rung's agreement is within 1 point of the teacher-teacher ceiling: the student absorbs the teacher's function about as well as another teacher does. Supports the simulability reading.
+
+------------------------------------------------------------------------------
+CAVEATS
+------------------------------------------------------------------------------
+  n=5 seeds per cell. The exact two-sided Wilcoxon floor at n=5 is 2/2^5 = 0.0625,
+  so the rank test cannot reach p<0.05 at any effect size; paired t-tests and
+  Cohen's d_z carry the quantitative story, as in RQ2 §4.2.
+  Accuracies are final-epoch point estimates, as in §4.1 and §4.2.
