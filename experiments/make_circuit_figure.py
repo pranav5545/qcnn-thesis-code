@@ -54,8 +54,11 @@ def main():
         raise
 
     fig, ax = qml.draw_mpl(qnode, style="pennylane")(x[0], model.q_params)
+    # fontsize 32, not 9. qml.draw_mpl sizes this circuit at roughly 24 inches wide and
+    # the thesis places it at 16.97 cm, so text shrinks by about 0.28x on the page:
+    # the old 9 pt title printed at ~2.5 pt against 12 pt body text. 32 x 0.28 ~ 9 pt.
     fig.suptitle("QCNN, $n=6$ qubits, 2 conv+pool layers, amplitude encoding "
-                 "(74 trainable parameters)", fontsize=9)
+                 "(74 trainable parameters)", fontsize=32)
     path_png = os.path.join(OUT_DIR, "fig_circuit_qcnn.png")
     fig.savefig(path_png, dpi=200, bbox_inches="tight")
     plt.close(fig)

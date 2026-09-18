@@ -359,7 +359,7 @@ def fig1_config_grid(all_data: dict):
         ax.set_yticks(ys)
         ax.set_yticklabels(labels, fontsize=8.5)
         ax.set_xlim(0.55, 1.06)
-        ax.set_xlabel("Final test accuracy (mean ± sd over 5 seeds)")
+        ax.set_xlabel("Final test accuracy (mean ± std over 5 seeds)")
         ax.set_title(ds_label)
         ax.grid(axis="y", visible=False)
     handles = [plt.Line2D([], [], marker=ANSATZ_MARKER[a], color=MUTED, linestyle="",
@@ -421,7 +421,7 @@ def fig2_encoding_matched(all_data: dict, analysis: dict):
 
 
 def fig3_learning_curves(all_data: dict):
-    """test_acc vs epoch, mean +- sd band, core grid only (depth 2), split by ansatz."""
+    """test_acc vs epoch, mean +- std band, core grid only (depth 2), split by ansatz."""
     fig, axes = plt.subplots(2, 2, figsize=(12.0, 8.0), sharex=True, sharey=True)
     for col, (ds_key, ds_label) in enumerate(DATASETS):
         data = all_data[ds_key]
@@ -455,7 +455,7 @@ def fig3_learning_curves(all_data: dict):
                 ax.set_xlabel("Epoch")
             if col == 0:
                 ax.set_ylabel("Test accuracy")
-    fig.suptitle("RQ2 — learning curves, core grid (depth 2), mean ± sd over 5 seeds",
+    fig.suptitle("RQ2 — learning curves, core grid (depth 2), mean ± std over 5 seeds",
                  fontsize=12.5, color=INK, y=0.98)
     fig.tight_layout(rect=[0, 0, 1, 0.95])
     fig.savefig(FIG_DIR / "fig3_learning_curves.png", bbox_inches="tight")
